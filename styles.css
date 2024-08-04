@@ -68,10 +68,17 @@ header p {
   margin: 0;
 }
 
+
 /*
+Dimensionamento para dispositivos moveis
+ */
+
+
+@media (max-width: 768px) {
+
+  /*
 dimensionamento da imagem do topo para dispositivos moveis
  */
-@media (max-width: 768px) {
   header {
     height: 40vh; /* Reduz a altura do header em dispositivos móveis */
     padding: 0 1em; /* Adiciona um padding lateral */
@@ -104,11 +111,35 @@ dimensionamento da imagem do topo para dispositivos moveis
     width: 150px;
     height: 150px;
   }
+
+  /*
+fim do dimensionamento da imagem do topo para dispositivos moveis
+ */
+
+  /*
+barra de navegação em dispositivos moveis
+ */
+  nav {
+    padding: 0.5em; /* Reduz o padding da barra de navegação */
+  }
+
+  nav ul li a {
+    font-size: 0.9em; /* Reduz o tamanho da fonte dos links de navegação */
+    padding: 0.3em 0.5em; /* Reduz o padding dos links */
+  }
+
+  nav ul li a.nav-logo {
+    font-size: 1.2em; /* Reduz o tamanho da fonte do logo na navegação */
+  }
+
+
 }
 
 /*
-fim do dimensionamento da imagem do topo para dispositivos moveis
+fim dimensionamento para dispositivos moveis
  */
+
+
 
 nav ul {
   list-style-type: none;
