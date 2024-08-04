@@ -186,7 +186,7 @@ section {
 alterar a cor de fundo do speaking apenas para controlo
  */
 #speaking {
-  background-color: #fa9601; /* Adiciona o fundo azul à seção */
+  background-color: #fa0101; /* Adiciona o fundo azul à seção */
 }
 
 section::before {
@@ -225,6 +225,11 @@ p, ul {
   box-sizing: border-box; /* Inclui padding e border na largura */
 }
 
+/* Estilo padrão para navegadores (desktop) */
+.about-container {
+  flex-direction: row; /* A imagem aparecerá depois do texto */
+}
+
 .about-photo img {
   border-radius: 50%;
   width: 300px;
@@ -240,7 +245,7 @@ p, ul {
 
 @media (max-width: 768px) {
   .about-container {
-    flex-direction: column;
+    flex-direction: column-reverse;
     text-align: center;
   }
 
