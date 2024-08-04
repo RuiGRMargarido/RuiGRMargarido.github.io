@@ -1,0 +1,443 @@
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+  overflow-x: hidden; /* Evita a barra de rolagem horizontal */
+}
+
+/* navegação*/
+nav {
+  background-color: #444;
+  padding: 1em;
+  text-align: center;
+  width: 100%;
+  transition: all 0.3s ease-in-out; /* Transição suave */
+  box-sizing: border-box; /* Inclui padding e border na largura */
+}
+
+nav.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+body.fixed-nav-padding {
+  padding-top: 4em; /* Ajuste conforme necessário para altura da navegação */
+}
+
+/*body*/
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  overflow-x: hidden; /* Evita a barra de rolagem horizontal */
+}
+
+header {
+  background: url('Fundo topo 8.webp') no-repeat center center;
+  background-size: cover;
+  color: #000000;
+  text-align: center;
+  height: 92vh; /* Ocupa 100% da altura da tela */
+  width: 100%; /* Ocupa 100% da largura da tela */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Define o contexto de posicionamento dos elementos filhos */
+  box-sizing: border-box; /* Inclui padding e border na largura */
+}
+
+header .header-content {
+  position: absolute;
+  top: 44%; /* Ajuste este valor para a posição vertical desejada */
+  left: 50%; /* Ajuste este valor para a posição horizontal desejada */
+  transform: translate(-50%, -70%); /* Centraliza o texto */
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.7em; /* Ajuste o tamanho da fonte do título */
+  margin: 0;
+}
+
+header p {
+  font-size: 1.5em; /* Ajuste o tamanho da fonte do parágrafo */
+  margin: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Centraliza os itens da navegação */
+  align-items: center; /* Alinha os itens verticalmente */
+  flex-wrap: wrap; /* Permite que itens quebrem linha se necessário */
+}
+
+nav ul li {
+  margin: 0 1em;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 0.5em; /* Aumenta a área clicável */
+}
+
+nav ul li a.nav-logo {
+  font-family: "Dancing Script", cursive; /* Aplica a fonte*/
+  font-size: 1.5em; /* Ajuste o tamanho conforme necessário */
+}
+
+section {
+  padding: 2em;
+  background-color: #fff;
+  margin: 1em 0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Inclui padding e border na largura */
+}
+
+section::before {
+  content: "";
+  display: block;
+  height: 4em; /* Espaço para compensar a navegação fixa */
+  margin-top: -4em; /* Compensa a altura adicionada */
+  visibility: hidden; /* Garante que o espaço não seja visível */
+}
+
+footer {
+  text-align: center;
+  padding: 1em 0;
+  background-color: #333;
+  color: #fff;
+  width: 100%; /* Garante que o rodapé ocupe toda a largura */
+  box-sizing: border-box; /* Inclui padding e border na largura */
+}
+
+h1, h2 {
+  margin: 0.5em 0;
+}
+
+p, ul {
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 2em 0;
+  flex-wrap: wrap; /* Permite que itens quebrem linha se necessário */
+  box-sizing: border-box; /* Inclui padding e border na largura */
+}
+
+.about-photo img {
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.about-text {
+  max-width: 600px;
+  margin-left: 2em;
+  box-sizing: border-box; /* Inclui padding e border na largura */
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    margin-left: 0;
+    margin-top: 1em;
+  }
+
+  .about-photo img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.education-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: space-between;
+  box-sizing: border-box; /* Inclui padding e border na largura */
+}
+
+.education-item {
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(33% - 1em); /* Permite que os itens fiquem na mesma linha com largura igual */
+  box-sizing: border-box; /* Inclui padding e border na largura */
+}
+
+.additional-training-container {
+  margin-top: 1em;
+}
+
+.additional-training {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: space-between;
+  box-sizing: border-box; /* Inclui padding e border na largura */
+}
+
+.training-item {
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(33% - 1em); /* Permite que os itens fiquem na mesma linha com largura igual */
+  box-sizing: border-box; /* Inclui padding e border na largura */
+}
+
+/* Inicia a parte de software engineering */
+.software-projects {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  box-sizing: border-box; /* Inclui padding e border na largura */
+}
+
+.project-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+  flex-wrap: wrap; /* Permite que itens quebrem linha se necessário */
+  box-sizing: border-box; /* Inclui padding e border na largura */
+}
+
+.project-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex: 1 1 48%; /* Permite que dois itens fiquem lado a lado */
+  box-sizing: border-box; /* Inclui padding e border na largura */
+}
+
+.project-details {
+  flex: 3;
+  padding-right: 1em;
+  box-sizing: border-box; /* Inclui padding e border na largura */
+}
+
+.project-video {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+  box-sizing: border-box; /* Inclui padding e border na largura */
+}
+
+.project-video iframe {
+  max-width: 100%;
+  height: auto;
+  box-sizing: border-box; /* Inclui padding e border na largura */
+}
+
+.project-item h3 {
+  margin-top: 0;
+}
+
+.project-skills {
+  margin-top: 1em;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; /* Inclui padding e border na largura */
+}
+
+.skills-list li {
+  background-color: #e0e0e0;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.5em;
+  box-sizing: border-box; /* Inclui padding e border na largura */
+}
+
+.additional-projects {
+  margin-top: 2em;
+  text-align: center;
+  box-sizing: border-box; /* Inclui padding e border na largura */
+}
+
+.additional-projects-container {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  flex-wrap: wrap;
+  box-sizing: border-box; /* Inclui padding e border na largura */
+}
+
+.additional-projects a {
+  background-color: #007bff;
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Inclui padding e border na largura */
+}
+
+.additional-projects a:hover {
+  background-color: #0056b3;
+}
+
+/*Mechanical Engineering*/
+
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.experience-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; /* Permite que itens quebrem linha se necessário */
+  gap: 1em;
+}
+
+.experience-details {
+  flex: 1 1 60%;
+  padding-right: 2em;
+}
+
+.experience-videos {
+  flex: 1 1 40%;
+}
+
+.skills-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-list li {
+  margin: 0.5em 0;
+}
+
+.video-library {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.video-library li {
+  margin: 0.5em 0;
+}
+
+.video-library a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.video-library a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo adicional para a seção de experiência profissional */
+.experience-container {
+  background-color: #f9f9f9;
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2em;
+}
+
+.experience-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.experience-details {
+  flex: 1 1 60%;
+  padding-right: 2em;
+}
+
+.experience-videos {
+  flex: 1 1 40%;
+}
+
+.experience-details strong {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.skills-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.skills-list li {
+  background-color: #e0e0e0;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .slick-carousel {
+    width: 100%;
+  }
+
+  .experience-item {
+    flex-direction: column;
+  }
+
+  .experience-details {
+    padding-right: 0;
+  }
+}
+
+.iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Proporção 16:9 */
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 1em; /* Espaçamento entre iframes */
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
