@@ -422,6 +422,22 @@ p, ul {
   .experience-details {
     padding-right: 0;
   }
+
+  .experience-videos {
+    width: 100%; /* Garante que os vídeos ocupem 100% da largura disponível */
+    padding-right: 0; /* Remove qualquer padding desnecessário */
+  }
+
+  .iframe-container {
+    padding-bottom: 56.25%; /* Mantém a proporção de 16:9 */
+    height: 0;
+    overflow: hidden;
+  }
+
+  .iframe-container iframe {
+    width: 100%; /* Garante que o iframe ocupe toda a largura disponível */
+    height: 100%;
+  }
 }
 
 .iframe-container {
