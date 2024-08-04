@@ -91,10 +91,12 @@ dimensionamento da imagem do topo para dispositivos moveis
 
   header h1 {
     font-size: 1.5em; /* Reduz o tamanho da fonte do título */
+    color: black;
   }
 
   header p {
     font-size: 0.9em; /* Reduz o tamanho da fonte do parágrafo */
+    color: black;
   }
 
   .about-container {
@@ -184,7 +186,7 @@ section {
 alterar a cor de fundo do speaking apenas para controlo
  */
 #speaking {
-  background-color: #01fadd; /* Adiciona o fundo azul à seção */
+  background-color: #fa9601; /* Adiciona o fundo azul à seção */
 }
 
 section::before {
