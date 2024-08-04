@@ -86,15 +86,15 @@ dimensionamento da imagem do topo para dispositivos moveis
 
   header .header-content {
     top: 50%;
-    transform: translate(-50%, -50%); /* Centraliza o texto */
+    transform: translate(-25%, -40%); /* Centraliza o texto */
   }
 
   header h1 {
-    font-size: 1.6em; /* Reduz o tamanho da fonte do título */
+    font-size: 1.5em; /* Reduz o tamanho da fonte do título */
   }
 
   header p {
-    font-size: 1.0em; /* Reduz o tamanho da fonte do parágrafo */
+    font-size: 0.9em; /* Reduz o tamanho da fonte do parágrafo */
   }
 
   .about-container {
@@ -120,15 +120,15 @@ fim do dimensionamento da imagem do topo para dispositivos moveis
 barra de navegação em dispositivos moveis
  */
   nav {
-    padding: 0.1em; /* Reduz o padding da barra de navegação */
+    padding: 0.3em; /* Reduz o padding da barra de navegação */
   }
 
   nav ul {
-    line-height: 0.2;
+    line-height: 0.3;
   }
 
   nav ul li a {
-    font-size: 0.7em; /* Reduz o tamanho da fonte dos links de navegação */
+    font-size: 0.9em; /* Reduz o tamanho da fonte dos links de navegação */
     padding: 0.1em 0.3em; /* Reduz o padding dos links */
   }
 
@@ -184,7 +184,7 @@ section {
 alterar a cor de fundo do speaking apenas para controlo
  */
 #speaking {
-  background-color: #faf601; /* Adiciona o fundo azul à seção */
+  background-color: #01fadd; /* Adiciona o fundo azul à seção */
 }
 
 section::before {
