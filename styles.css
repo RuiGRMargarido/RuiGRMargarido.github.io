@@ -95,7 +95,7 @@ dimensionamento da imagem do topo para dispositivos moveis
   }
 
   header p {
-    font-size: 0.9em; /* Reduz o tamanho da fonte do parágrafo */
+    font-size: 0.8em; /* Reduz o tamanho da fonte do parágrafo */
     color: black;
   }
 
@@ -126,7 +126,7 @@ barra de navegação em dispositivos moveis
   }
 
   nav ul {
-    line-height: 0.3;
+    line-height: 0.4;
   }
 
   nav ul li a {
@@ -186,7 +186,7 @@ section {
 alterar a cor de fundo do speaking apenas para controlo
  */
 #speaking {
-  background-color: #fa0101; /* Adiciona o fundo azul à seção */
+  background-color: #01fadd; /* Adiciona o fundo azul à seção */
 }
 
 section::before {
