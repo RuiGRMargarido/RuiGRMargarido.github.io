@@ -124,12 +124,12 @@ barra de navegação em dispositivos moveis
   }
 
   nav ul li a {
-    font-size: 0.9em; /* Reduz o tamanho da fonte dos links de navegação */
-    padding: 0.3em 0.5em; /* Reduz o padding dos links */
+    font-size: 0.6em; /* Reduz o tamanho da fonte dos links de navegação */
+    padding: 0.1em 0.3em; /* Reduz o padding dos links */
   }
 
   nav ul li a.nav-logo {
-    font-size: 1.2em; /* Reduz o tamanho da fonte do logo na navegação */
+    font-size: 0.9em; /* Reduz o tamanho da fonte do logo na navegação */
   }
 
 
