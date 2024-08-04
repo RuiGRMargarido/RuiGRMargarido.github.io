@@ -73,7 +73,7 @@ dimensionamento da imagem do topo para dispositivos moveis
  */
 @media (max-width: 768px) {
   header {
-    height: 60vh; /* Reduz a altura do header em dispositivos móveis */
+    height: 40vh; /* Reduz a altura do header em dispositivos móveis */
     padding: 0 1em; /* Adiciona um padding lateral */
   }
 
@@ -83,11 +83,11 @@ dimensionamento da imagem do topo para dispositivos moveis
   }
 
   header h1 {
-    font-size: 1.8em; /* Reduz o tamanho da fonte do título */
+    font-size: 1.6em; /* Reduz o tamanho da fonte do título */
   }
 
   header p {
-    font-size: 1.2em; /* Reduz o tamanho da fonte do parágrafo */
+    font-size: 1.0em; /* Reduz o tamanho da fonte do parágrafo */
   }
 
   .about-container {
@@ -149,7 +149,7 @@ section {
 alterar a cor de fundo do speaking apenas para controlo
  */
 #speaking {
-  background-color: #007bff; /* Adiciona o fundo azul à seção */
+  background-color: #12fa01; /* Adiciona o fundo azul à seção */
 }
 
 section::before {
