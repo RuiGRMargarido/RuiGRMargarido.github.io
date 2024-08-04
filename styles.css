@@ -180,7 +180,7 @@ section {
 alterar a cor de fundo do speaking apenas para controlo
  */
 #speaking {
-  background-color: #fa011e; /* Adiciona o fundo azul à seção */
+  background-color: #012afa; /* Adiciona o fundo azul à seção */
 }
 
 section::before {
