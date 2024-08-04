@@ -68,6 +68,48 @@ header p {
   margin: 0;
 }
 
+/*
+dimensionamento da imagem do topo para dispositivos moveis
+ */
+@media (max-width: 768px) {
+  header {
+    height: 60vh; /* Reduz a altura do header em dispositivos móveis */
+    padding: 0 1em; /* Adiciona um padding lateral */
+  }
+
+  header .header-content {
+    top: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o texto */
+  }
+
+  header h1 {
+    font-size: 1.8em; /* Reduz o tamanho da fonte do título */
+  }
+
+  header p {
+    font-size: 1.2em; /* Reduz o tamanho da fonte do parágrafo */
+  }
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    margin-left: 0;
+    margin-top: 1em;
+  }
+
+  .about-photo img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/*
+fim do dimensionamento da imagem do topo para dispositivos moveis
+ */
+
 nav ul {
   list-style-type: none;
   padding: 0;
