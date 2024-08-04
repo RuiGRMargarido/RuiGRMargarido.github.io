@@ -120,20 +120,20 @@ fim do dimensionamento da imagem do topo para dispositivos moveis
 barra de navegação em dispositivos moveis
  */
   nav {
-    padding: 0.3em; /* Reduz o padding da barra de navegação */
+    padding: 0.1em; /* Reduz o padding da barra de navegação */
   }
 
   nav ul {
-    line-height: 0.5;
+    line-height: 0.2;
   }
 
   nav ul li a {
-    font-size: 0.6em; /* Reduz o tamanho da fonte dos links de navegação */
+    font-size: 0.7em; /* Reduz o tamanho da fonte dos links de navegação */
     padding: 0.1em 0.3em; /* Reduz o padding dos links */
   }
 
   nav ul li a.nav-logo {
-    font-size: 0.4em; /* Reduz o tamanho da fonte do logo na navegação */
+    font-size: 0.2em; /* Reduz o tamanho da fonte do logo na navegação */
   }
 
 
@@ -184,7 +184,7 @@ section {
 alterar a cor de fundo do speaking apenas para controlo
  */
 #speaking {
-  background-color: #01fa65; /* Adiciona o fundo azul à seção */
+  background-color: #faf601; /* Adiciona o fundo azul à seção */
 }
 
 section::before {
