@@ -145,6 +145,10 @@ barra de navegação em dispositivos moveis
 fim dimensionamento para dispositivos moveis
  */
 
+/*
+dimensionamento para desktop
+ */
+
 
 
 nav ul {
@@ -186,7 +190,7 @@ section {
 alterar a cor de fundo do speaking apenas para controlo
  */
 #speaking {
-  background-color: #01fadd; /* Adiciona o fundo azul à seção */
+  background-color: #fa0101; /* Adiciona o fundo azul à seção */
 }
 
 section::before {
@@ -332,7 +336,7 @@ p, ul {
 }
 
 .project-video {
-  flex: 1;
+  flex: 3;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -341,8 +345,8 @@ p, ul {
 }
 
 .project-video iframe {
-  max-width: 100%;
-  height: auto;
+  max-width: 80%;
+  height: 300px;
   box-sizing: border-box; /* Inclui padding e border na largura */
 }
 
