@@ -407,6 +407,29 @@ p, ul {
 
 /*Mechanical Engineering*/
 
+.heading-container {
+  display: flex;
+  align-items: center; /* Alinha verticalmente o h3 e o h4 */
+}
+
+h3 {
+  display: flex;
+  align-items: center; /* Alinha a imagem e o texto verticalmente */
+  /*margin: 0; /* Remove a margem padrão do h3 */
+}
+
+h3 img {
+  vertical-align: middle;
+  margin-right: 1em; /* Espaçamento entre a imagem e o texto */
+  max-height: 6em;
+  margin-bottom: 1em;
+}
+
+h4 {
+  margin: 0; /* Remove a margem padrão do h4 */
+  margin-left: 1em; /* Espaçamento entre o h3 e o h4 */
+}
+
 .experience-container {
   display: flex;
   flex-direction: column;
