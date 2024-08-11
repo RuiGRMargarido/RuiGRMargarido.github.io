@@ -422,13 +422,26 @@ h3 img {
   vertical-align: middle;
   margin-right: 1em; /* Espaçamento entre a imagem e o texto */
   max-height: 6em;
-  margin-bottom: 1em;
+  margin-bottom: 0.0em;
 }
 
 h4 {
   margin: 0; /* Remove a margem padrão do h4 */
   margin-left: 1em; /* Espaçamento entre o h3 e o h4 */
 }
+
+.BIL-link-container {
+  padding-left: calc(3.2em + 1em); /* Alinha o link com o centro da imagem */
+  padding-bottom: 1em;
+}
+
+.BIL-link-container a {
+  display: inline-block;
+  text-decoration: none; /* Remove o sublinhado do link */
+  color: #007bff; /* Cor do link */
+  font-weight: bold; /* Deixa o link em negrito */
+}
+
 
 .experience-container {
   display: flex;
@@ -603,3 +616,4 @@ imagem da salamandra a pellets
   height: 80%;
   border: 0;
 }
+
