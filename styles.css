@@ -186,12 +186,7 @@ section {
   box-sizing: border-box; /* Inclui padding e border na largura */
 }
 
-/*
-alterar a cor de fundo do speaking apenas para controlo
- */
-#speaking {
-  background-color: #01fadd; /* Adiciona o fundo azul à seção */
-}
+
 
 section::before {
   content: "";
