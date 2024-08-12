@@ -147,14 +147,15 @@ barra de navegação em dispositivos moveis
   }
 
   nav ul li {
-    list-style: none; /* Remove o estilo de lista padrão */
-    margin: 0 0.3em; /* Reduz a margem entre os links */
+    flex: 1 1 25%; /* Define a largura de cada item, aqui 20% para duas colunas */
+    margin: 0.3em; /* Adiciona espaço ao redor de cada link */
+    text-align: center; /* Centraliza o texto dentro de cada link */
 
   }
 
   nav ul li a {
     padding: 0.1em 0.2em; /* Reduz o padding dentro dos links */
-    font-size: 1.0em; /* Reduz o tamanho da fonte dos links */
+    font-size: 0.9em; /* Reduz o tamanho da fonte dos links */
     display: block; /* Garante que os links ocupem toda a altura disponível */
     text-align: center; /* Centraliza o texto dos links */
   }
