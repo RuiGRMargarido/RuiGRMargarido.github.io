@@ -147,13 +147,14 @@ barra de navegação em dispositivos moveis
   }
 
   nav ul li {
-    margin: 0 0.5em; /* Reduz a margem entre os links */
     list-style: none; /* Remove o estilo de lista padrão */
+    margin: 0 0.5em; /* Reduz a margem entre os links */
+
   }
 
   nav ul li a {
-    padding: 0.1em 0.3em; /* Reduz o padding dentro dos links */
-    font-size: 0.8em; /* Reduz o tamanho da fonte dos links */
+    padding: 0.1em 0.2em; /* Reduz o padding dentro dos links */
+    font-size: 1.0em; /* Reduz o tamanho da fonte dos links */
     display: block; /* Garante que os links ocupem toda a altura disponível */
     text-align: center; /* Centraliza o texto dos links */
   }
@@ -162,7 +163,7 @@ barra de navegação em dispositivos moveis
     font-size: 1.2em; /* Reduz o tamanho da fonte do logo na navegação */
     display: block;
     text-align: center; /* Centraliza o texto do logo */
-    margin-bottom: 0.2em; /* Adiciona uma pequena margem inferior ao logo */
+    margin-bottom: 0.0em; /* Adiciona uma pequena margem inferior ao logo */
   }
 
   .nav-title {
