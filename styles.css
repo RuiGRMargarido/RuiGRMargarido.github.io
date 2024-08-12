@@ -89,7 +89,7 @@ Dimensionamento para dispositivos moveis
 dimensionamento da imagem do topo para dispositivos moveis
  */
   header {
-    height: 40vh; /* Reduz a altura do header em dispositivos móveis */
+    height: 55vh; /* Reduz a altura do header em dispositivos móveis */
     padding: 0 1em; /* Adiciona um padding lateral */
   }
 
@@ -143,12 +143,12 @@ barra de navegação em dispositivos moveis
     justify-content: center; /* Centraliza os links horizontalmente */
     padding: 0; /* Remove o padding interno */
     margin: 0; /* Remove qualquer margem extra */
-    width: 80%; /* Garante que o `ul` ocupe toda a largura disponível */
+    width: 90%; /* Garante que o `ul` ocupe toda a largura disponível */
   }
 
   nav ul li {
     list-style: none; /* Remove o estilo de lista padrão */
-    margin: 0 0.5em; /* Reduz a margem entre os links */
+    margin: 0 0.3em; /* Reduz a margem entre os links */
 
   }
 
@@ -160,10 +160,11 @@ barra de navegação em dispositivos moveis
   }
 
   nav .nav-logo {
-    font-size: 1.2em; /* Reduz o tamanho da fonte do logo na navegação */
+    font-size: 0.8em; /* Reduz o tamanho da fonte do logo na navegação */
     display: block;
     text-align: center; /* Centraliza o texto do logo */
-    margin-bottom: 0.0em; /* Adiciona uma pequena margem inferior ao logo */
+    padding: 0; /* Remove o padding ao redor do logo */
+    margin: 0; /* Remove a margem ao redor do logo */
   }
 
   .nav-title {
