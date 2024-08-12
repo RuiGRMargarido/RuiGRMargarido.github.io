@@ -304,6 +304,77 @@ p, ul {
     width: 150px;
     height: 150px;
   }
+
+  .experience-container {
+    display: flex;
+    flex-direction: column; /* Organiza os itens em uma coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    padding: 1em; /* Adiciona padding para espaçamento interno */
+    box-sizing: border-box; /* Garante que padding seja incluído na largura */
+    overflow-x: hidden; /* Impede que o conteúdo transborde horizontalmente */
+    width: 95%; /* Garante que o contêiner ocupe toda a largura da tela */
+  }
+
+  .experience-item {
+    display: flex;
+    flex-direction: column; /* Alinha os elementos em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    text-align: center; /* Centraliza o texto */
+    width: 100%; /* Garante que cada item ocupe toda a largura disponível */
+    box-sizing: border-box; /* Inclui padding e borda na largura */
+    margin-bottom: 1em; /* Espaçamento entre os itens */
+  }
+
+  .experience-details {
+    width: 95%; /* Garante que o texto ocupe toda a largura disponível */
+    padding: 1em; /* Adiciona padding ao redor do texto */
+    box-sizing: border-box; /* Inclui padding e borda na largura */
+    overflow-wrap: break-word; /* Impede que o texto saia da tela */
+  }
+
+  .experience-videos {
+    display: flex;
+    flex-direction: column; /* Alinha os vídeos em uma linha */
+    justify-content: flex-start; /* Alinha os vídeos à esquerda */
+    flex-wrap: nowrap; /* Impede que os vídeos quebrem em várias linhas */
+    overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
+    gap: 1em; /* Adiciona espaço entre os vídeos */
+    width: 100%; /* Garante que o contêiner ocupe toda a largura */
+    padding: 1em 0; /* Adiciona espaçamento ao redor do contêiner */
+  }
+
+  .iframe-container {
+    width: 100%;
+    max-width: 250px; /* Define um tamanho máximo para os vídeos/imagens */
+    margin: 0 auto; /* Centraliza os vídeos/imagens */
+  }
+
+  /*logo e texto de BIL*/
+  .heading-container {
+    display: flex;
+    flex-direction: column; /* Organiza os itens em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 1em; /* Adiciona espaço abaixo do heading */
+  }
+
+  .heading-container h3 {
+    order: 1; /* Coloca o texto abaixo da imagem */
+    margin-top: 0.1em; /* Adiciona espaço entre a imagem e o texto */
+    margin-bottom: 10; /* Remove margem inferior extra */
+  }
+
+  .heading-container img {
+    order: 5; /* Mantém a imagem acima do texto */
+    max-width: 300px; /* Define uma largura máxima para a imagem */
+    height: auto; /* Mantém a proporção da imagem */
+  }
+
+  .heading-container h4 {
+    order: 3; /* Mantém a data abaixo do título */
+    margin-top: 0.5em; /* Adiciona espaço entre o título e a data */
+  }
+
 }
 
 .education-container {
