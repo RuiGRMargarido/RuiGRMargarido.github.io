@@ -14,6 +14,8 @@ nav {
   box-sizing: border-box; /* Inclui padding e border na largura */
 }
 
+
+
 nav.fixed {
   position: fixed;
   top: 0;
@@ -21,6 +23,13 @@ nav.fixed {
   right: 0;
   z-index: 1000;
 }
+
+/* Estilo padrão para desktop */
+.nav-title-mobile,
+.nav-title2-mobile {
+  display: none; /* Oculta o texto reduzido no desktop */
+}
+
 
 body.fixed-nav-padding {
   padding-top: 4em; /* Ajuste conforme necessário para altura da navegação */
@@ -127,6 +136,13 @@ barra de navegação em dispositivos moveis
 
   nav ul {
     line-height: 0.4;
+    flex-direction: row;
+    justify-content: center; /* Centraliza os links horizontalmente */
+    padding: 0;
+  }
+
+  nav ul li {
+    margin: 0 0.5em; /* Reduz a margem entre os links */
   }
 
   nav ul li a {
@@ -137,6 +153,23 @@ barra de navegação em dispositivos moveis
   nav ul li a.nav-logo {
     font-size: 0.2em; /* Reduz o tamanho da fonte do logo na navegação */
   }
+
+  .nav-title {
+    display: none;
+  }
+
+  .nav-title-mobile {
+    display: inline-block; /* Mostra o texto reduzido */
+  }
+
+  .nav-title2 {
+    display: none;
+  }
+
+  .nav-title2-mobile {
+    display: inline-block; /* Mostra o texto reduzido */
+  }
+
 
 
 }
