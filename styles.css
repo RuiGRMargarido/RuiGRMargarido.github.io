@@ -50,7 +50,7 @@ header {
   background-size: cover;
   color: #000000;
   text-align: center;
-  height: 92vh; /* Ocupa 100% da altura da tela */
+  height: 90vh; /* Ocupa 100% da altura da tela */
   width: 100%; /* Ocupa 100% da largura da tela */
   display: flex;
   justify-content: center;
@@ -78,6 +78,7 @@ header p {
 }
 
 
+
 /*
 Dimensionamento para dispositivos moveis
  */
@@ -89,6 +90,7 @@ Dimensionamento para dispositivos moveis
 dimensionamento da imagem do topo para dispositivos moveis
  */
   header {
+
     height: 55vh; /* Reduz a altura do header em dispositivos móveis */
     padding: 0 1em; /* Adiciona um padding lateral */
   }
@@ -238,7 +240,7 @@ section {
 section::before {
   content: "";
   display: block;
-  height: 4em; /* Espaço para compensar a navegação fixa */
+  height: 6em; /* Espaço para compensar a navegação fixa */
   margin-top: -4em; /* Compensa a altura adicionada */
   visibility: hidden; /* Garante que o espaço não seja visível */
 }
@@ -361,7 +363,7 @@ p, ul {
   .heading-container h3 {
     order: 1; /* Coloca o texto abaixo da imagem */
     margin-top: 0.1em; /* Adiciona espaço entre a imagem e o texto */
-    margin-bottom: 10; /* Remove margem inferior extra */
+    margin-bottom: 10em; /* Remove margem inferior extra */
   }
 
   .heading-container img {
