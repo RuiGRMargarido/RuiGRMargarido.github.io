@@ -131,27 +131,38 @@ fim do dimensionamento da imagem do topo para dispositivos moveis
 barra de navegação em dispositivos moveis
  */
   nav {
-    padding: 0.3em; /* Reduz o padding da barra de navegação */
+    padding: 0.2em 0.5em; /* Reduz o padding da barra de navegação */
+    height: auto; /* Deixa a altura da barra automática, ajustando ao conteúdo */
+    display: flex;
+    align-items: center; /* Centraliza os itens verticalmente */
+    justify-content: center; /* Centraliza os itens horizontalmente */
   }
 
   nav ul {
-    line-height: 0.4;
-    flex-direction: row;
+    flex-direction: row; /* Mantém os links em linha */
     justify-content: center; /* Centraliza os links horizontalmente */
-    padding: 0;
+    padding: 0; /* Remove o padding interno */
+    margin: 0; /* Remove qualquer margem extra */
+    width: 80%; /* Garante que o `ul` ocupe toda a largura disponível */
   }
 
   nav ul li {
     margin: 0 0.5em; /* Reduz a margem entre os links */
+    list-style: none; /* Remove o estilo de lista padrão */
   }
 
   nav ul li a {
-    font-size: 0.9em; /* Reduz o tamanho da fonte dos links de navegação */
-    padding: 0.1em 0.3em; /* Reduz o padding dos links */
+    padding: 0.1em 0.3em; /* Reduz o padding dentro dos links */
+    font-size: 0.8em; /* Reduz o tamanho da fonte dos links */
+    display: block; /* Garante que os links ocupem toda a altura disponível */
+    text-align: center; /* Centraliza o texto dos links */
   }
 
-  nav ul li a.nav-logo {
-    font-size: 0.2em; /* Reduz o tamanho da fonte do logo na navegação */
+  nav .nav-logo {
+    font-size: 1.2em; /* Reduz o tamanho da fonte do logo na navegação */
+    display: block;
+    text-align: center; /* Centraliza o texto do logo */
+    margin-bottom: 0.2em; /* Adiciona uma pequena margem inferior ao logo */
   }
 
   .nav-title {
