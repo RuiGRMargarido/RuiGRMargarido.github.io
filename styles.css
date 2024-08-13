@@ -575,6 +575,11 @@ h4 {
   align-items: flex-start;
   flex-wrap: wrap; /* Permite que itens quebrem linha se necessário */
   gap: 1em;
+  padding: 1.5em;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
 .experience-details {
@@ -617,7 +622,7 @@ h4 {
 
 /* Estilo adicional para a seção de experiência profissional */
 .experience-container {
-  background-color: #f9f9f9;
+  background-color: #494646;
   padding: 2em;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -704,15 +709,58 @@ imagem da salamandra a pellets
 
   .experience-item {
     flex-direction: column;
+    margin-bottom: 1em; /* Ajuste do espaçamento entre os itens */
   }
 
   .experience-details {
     padding-right: 0;
+    text-align: center; /* Centraliza o texto em dispositivos móveis */
+  }
+
+  .heading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 0.5em; /* Reduzido para diminuir o espaço após o texto */
+  }
+
+  .heading-container h3 {
+    order: 1;
+    margin-top: 0.1em;
+    margin-bottom: 0.5em; /* Reduzido para diminuir o espaço após o texto */
+  }
+
+  .heading-container img {
+    order: 5;
+    max-width: 80%; /* Ajuste conforme necessário */
+    height: auto;
+    margin-bottom: 0.5em; /* Espaço reduzido */
+  }
+
+  .heading-container h4 {
+    order: 3;
+    margin-top: 0.5em;
+    margin-bottom: 0; /* Remove qualquer margem extra */
   }
 
   .experience-videos {
     width: 100%; /* Garante que os vídeos ocupem 100% da largura disponível */
     padding-right: 0; /* Remove qualquer padding desnecessário */
+  }
+
+  .experience-image {
+    flex: 0 0 90%; /* A imagem ocupa 30% da largura */
+    max-width: 90%; /* Garante que a imagem não ultrapasse 30% */
+    display: flex; /* Adiciona flexbox ao contêiner da imagem */
+    align-items: center; /* Centraliza a imagem verticalmente */
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+  }
+
+  .experience-image img {
+    width: 100%; /* Imagem ocupa toda a largura da coluna */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover; /* Ajusta a imagem dentro do contêiner */
   }
 
   .iframe-container {
