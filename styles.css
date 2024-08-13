@@ -22,6 +22,7 @@ nav.fixed {
   left: 0;
   right: 0;
   z-index: 1000;
+  height: auto; /* Ou ajuste conforme necessário */
 }
 
 /* Estilo padrão para desktop */
@@ -32,7 +33,7 @@ nav.fixed {
 
 
 body.fixed-nav-padding {
-  padding-top: 4em; /* Ajuste conforme necessário para altura da navegação */
+  padding-top: 6em; /* Ajuste conforme necessário para altura da navegação */
 }
 
 /*body*/
@@ -85,6 +86,11 @@ Dimensionamento para dispositivos moveis
 
 
 @media (max-width: 768px) {
+
+  body.fixed-nav-padding {
+    padding-top: 8em; /* Ajuste conforme necessário para altura da navegação */
+  }
+
 
   /*
 dimensionamento da imagem do topo para dispositivos moveis
@@ -239,7 +245,7 @@ section {
 
 section::before {
   content: "";
-  display: block;
+  display: flex;
   height: 6em; /* Espaço para compensar a navegação fixa */
   margin-top: -4em; /* Compensa a altura adicionada */
   visibility: hidden; /* Garante que o espaço não seja visível */
