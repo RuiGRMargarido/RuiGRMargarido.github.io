@@ -548,15 +548,14 @@ h3 img {
 
 h4 {
   margin: 0; /* Remove a margem padrão do h4 */
-  margin-left: 1em; /* Espaçamento entre o h3 e o h4 */
-}
-
-.BIL-link-container {
-  padding-left: calc(3.2em + 1em); /* Alinha o link com o centro da imagem */
   padding-bottom: 1em;
 }
 
-.BIL-link-container a {
+.company-link-container {
+  padding-bottom: 1em;
+}
+
+.company-link-container a {
   display: inline-block;
   text-decoration: none; /* Remove o sublinhado do link */
   color: #007bff; /* Cor do link */
@@ -625,10 +624,29 @@ h4 {
   margin-bottom: 2em;
 }
 
+
+
 .experience-item {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
+  display: flex; /* Define como flexbox */
+  flex-direction: row; /* Organiza os filhos em uma linha */
+  align-items: center; /* Alinha o conteúdo ao centro verticalmente */
+  justify-content: center; /* Centraliza as colunas horizontalmente */
+  gap: 2em; /* Espaço entre as colunas */
+  margin-bottom: 1.5em; /* Espaço inferior entre as experiências */
+}
+
+.experience-image {
+  flex: 0 0 26%; /* A imagem ocupa 30% da largura */
+  max-width: 26%; /* Garante que a imagem não ultrapasse 30% */
+  display: flex; /* Adiciona flexbox ao contêiner da imagem */
+  align-items: center; /* Centraliza a imagem verticalmente */
+  justify-content: center; /* Centraliza a imagem horizontalmente */
+}
+
+.experience-image img {
+  width: 100%; /* Imagem ocupa toda a largura da coluna */
+  height: auto; /* Mantém a proporção da imagem */
+  object-fit: cover; /* Ajusta a imagem dentro do contêiner */
 }
 
 .experience-details {
@@ -639,6 +657,8 @@ h4 {
 .experience-videos {
   flex: 1 1 40%;
 }
+
+
 
 .experience-details strong {
   font-size: 1.2em;
