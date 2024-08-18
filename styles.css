@@ -320,7 +320,7 @@ p, ul {
     padding: 1em; /* Adiciona padding para espaçamento interno */
     box-sizing: border-box; /* Garante que padding seja incluído na largura */
     overflow-x: hidden; /* Impede que o conteúdo transborde horizontalmente */
-    width: 95%; /* Garante que o contêiner ocupe toda a largura da tela */
+    width: 100%; /* Garante que o contêiner ocupe toda a largura da tela */
   }
 
   .experience-item {
@@ -330,11 +330,11 @@ p, ul {
     text-align: center; /* Centraliza o texto */
     width: 100%; /* Garante que cada item ocupe toda a largura disponível */
     box-sizing: border-box; /* Inclui padding e borda na largura */
-    margin-bottom: 1em; /* Espaçamento entre os itens */
+    margin-bottom: 0.1em; /* Espaçamento entre os itens */
   }
 
   .experience-details {
-    width: 95%; /* Garante que o texto ocupe toda a largura disponível */
+    width: 100%; /* Garante que o texto ocupe toda a largura disponível */
     padding: 1em; /* Adiciona padding ao redor do texto */
     box-sizing: border-box; /* Inclui padding e borda na largura */
     overflow-wrap: break-word; /* Impede que o texto saia da tela */
@@ -709,7 +709,7 @@ imagem da salamandra a pellets
 
   .experience-item {
     flex-direction: column;
-    margin-bottom: 1em; /* Ajuste do espaçamento entre os itens */
+    margin-bottom: 0.05em; /* Ajuste do espaçamento entre os itens */
   }
 
   .experience-details {
@@ -773,6 +773,16 @@ imagem da salamandra a pellets
     width: 100%; /* Garante que o iframe ocupe toda a largura disponível */
     height: 100%;
   }
+
+  /* Estilo adicional para a seção de experiência profissional */
+  .experience-container {
+    background-color: #494646;
+    padding: 0.5em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0.5em;
+  }
+
 }
 
 
