@@ -860,7 +860,7 @@ imagem da salamandra a pellets
 
 @media (max-width: 768px) {
   .social-icon {
-    width: 2em; /* Ajuste o tamanho do ícone para dispositivos móveis */
-    height: 2em; /* Ajuste o tamanho do ícone para dispositivos móveis */
+    width: 1.1em; /* Ajuste o tamanho do ícone para dispositivos móveis */
+    height: 1.1em; /* Ajuste o tamanho do ícone para dispositivos móveis */
   }
 }
