@@ -713,8 +713,8 @@ imagem da salamandra a pellets
   }
 
   .experience-details {
-    padding-right: 0;
-    text-align: center; /* Centraliza o texto em dispositivos móveis */
+    align-content: center;
+    padding: 0.1em;
   }
 
   .heading-container {
