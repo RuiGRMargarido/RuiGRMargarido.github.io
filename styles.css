@@ -788,7 +788,12 @@ imagem da salamandra a pellets
 
   }
 
-  .mechanical-engineering{
+  .education-item {
+    flex: 1 1 calc(80% - 1em); /* Permite que os itens fiquem na mesma linha com largura igual */
+  }
+
+  .training-item {
+    flex: 1 1 calc(80% - 1em); /* Permite que os itens fiquem na mesma linha com largura igual */
 
   }
 }
