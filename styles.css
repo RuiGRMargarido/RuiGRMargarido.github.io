@@ -796,6 +796,18 @@ imagem da salamandra a pellets
     flex: 1 1 calc(80% - 1em); /* Permite que os itens fiquem na mesma linha com largura igual */
 
   }
+
+  .social-icon {
+    width: 0.01em; /* Tamanho do ícone */
+    height: 0.01em; /* Tamanho do ícone */
+    transition: transform 0.3s ease; /* Animação suave ao passar o mouse */
+  }
+
+
+  .social-icon:hover {
+    transform: scale(1.2); /* Aumenta ligeiramente o ícone ao passar o mouse */
+  }
+
 }
 
 
@@ -827,5 +839,33 @@ imagem da salamandra a pellets
   width: 80%;
   height: 80%;
   border: 0;
+}
+
+/*!*contactos*/
+
+/* *!*/
+
+
+/*.contact-container {*/
+/*  display: flex;*/
+/*  justify-content: center; !* Centraliza o ícone horizontalmente *!*/
+/*  align-items: center; !* Centraliza o ícone verticalmente *!*/
+/*  margin-top: 1em;*/
+/*}*/
+
+/*.contact-container a {*/
+/*  display: inline-block;*/
+/*  text-decoration: none;*/
+/*}*/
+
+.social-icon {
+  width: 3em; /* Tamanho do ícone */
+  height: 3em; /* Tamanho do ícone */
+  transition: transform 0.3s ease; /* Animação suave ao passar o mouse */
+}
+
+
+.social-icon:hover {
+  transform: scale(1.2); /* Aumenta ligeiramente o ícone ao passar o mouse */
 }
 

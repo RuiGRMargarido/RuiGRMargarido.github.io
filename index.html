@@ -39,7 +39,12 @@
       <span class="nav-title2">Mechanical Engineer</span>
       <span class="nav-title2-mobile">Mechanical</span>
     </a></li>
-    <li><a href="#contact">Contact</a></li>
+
+    <li>
+      <a href="https://www.linkedin.com/in/rui-margarido-4a5b49142/" target="_blank">
+        <img src="free-linkedin-logo.png" alt="LinkedIn" class="social-icon">
+      </a>
+    </li>
   </ul>
 </nav>
 
@@ -367,13 +372,6 @@
 </section>
 
 
-
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: rui.margarido@example.com</p>
-  <p>Phone: +351 123 456 789</p>
-</section>
-
 <footer>
   <p>&copy; 2024 by Rui Margarido. Proudly created with HTML & CSS</p>
 </footer>
@@ -419,14 +417,17 @@
 
   document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      var target = document.querySelector(this.getAttribute('href'));
-      var offset = document.querySelector('nav').offsetHeight;
+      // Verifica se o href começa com '#', ou seja, é um link interno
+      if (this.getAttribute('href').startsWith('#')) {
+        e.preventDefault();
+        var target = document.querySelector(this.getAttribute('href'));
+        var offset = document.querySelector('nav').offsetHeight;
 
-      window.scrollTo({
-        top: target.offsetTop - offset,
-        behavior: 'smooth'
-      });
+        window.scrollTo({
+          top: target.offsetTop - offset,
+          behavior: 'smooth'
+        });
+      }
     });
   });
 </script>
