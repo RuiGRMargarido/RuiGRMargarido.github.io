@@ -797,17 +797,6 @@ imagem da salamandra a pellets
 
   }
 
-  .social-icon {
-    width: 0.01em; /* Tamanho do ícone */
-    height: 0.01em; /* Tamanho do ícone */
-    transition: transform 0.3s ease; /* Animação suave ao passar o mouse */
-  }
-
-
-  .social-icon:hover {
-    transform: scale(1.2); /* Aumenta ligeiramente o ícone ao passar o mouse */
-  }
-
 }
 
 
@@ -869,3 +858,9 @@ imagem da salamandra a pellets
   transform: scale(1.2); /* Aumenta ligeiramente o ícone ao passar o mouse */
 }
 
+@media (max-width: 768px) {
+  .social-icon {
+    width: 2em; /* Ajuste o tamanho do ícone para dispositivos móveis */
+    height: 2em; /* Ajuste o tamanho do ícone para dispositivos móveis */
+  }
+}
