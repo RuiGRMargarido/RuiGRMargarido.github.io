@@ -147,16 +147,17 @@ barra de navegação em dispositivos moveis
   }
 
   nav ul {
+    display: flex;
     flex-direction: row; /* Mantém os links em linha */
     justify-content: center; /* Centraliza os links horizontalmente */
     padding: 0; /* Remove o padding interno */
     margin: 0; /* Remove qualquer margem extra */
-    width: 90%; /* Garante que o `ul` ocupe toda a largura disponível */
+    width: 100%; /* Garante que o `ul` ocupe toda a largura disponível */
   }
 
   nav ul li {
-    flex: 1 1 25%; /* Define a largura de cada item, aqui 20% para duas colunas */
-    margin: 0.3em; /* Adiciona espaço ao redor de cada link */
+    flex: 1 1 22%; /* Define a largura de cada item, aqui 20% para duas colunas */
+    margin: 0; /* Adiciona espaço ao redor de cada link */
     text-align: center; /* Centraliza o texto dentro de cada link */
 
   }
@@ -860,7 +861,8 @@ imagem da salamandra a pellets
 
 @media (max-width: 768px) {
   .social-icon {
-    width: 1.1em; /* Ajuste o tamanho do ícone para dispositivos móveis */
-    height: 1.1em; /* Ajuste o tamanho do ícone para dispositivos móveis */
+    width: 2em; /* Ajuste o tamanho do ícone para dispositivos móveis */
+    height: 2em; /* Ajuste o tamanho do ícone para dispositivos móveis */
+
   }
 }
