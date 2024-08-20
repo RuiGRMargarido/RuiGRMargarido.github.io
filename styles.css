@@ -866,3 +866,11 @@ imagem da salamandra a pellets
 
   }
 }
+
+.bitbucket-icon{
+  padding-top: 0.8em;
+  padding-left: 0.5em;
+  width: 4em; /* Tamanho do ícone */
+  height: 4em; /* Tamanho do ícone */
+  transition: transform 0.3s ease; /* Animação suave ao passar o mouse */
+}
