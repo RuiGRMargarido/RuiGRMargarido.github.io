@@ -274,7 +274,7 @@ p, ul {
 .about-container {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin: 2em 0;
   flex-wrap: wrap; /* Permite que itens quebrem linha se necessário */
   box-sizing: border-box; /* Inclui padding e border na largura */
@@ -287,15 +287,18 @@ p, ul {
 
 .about-photo img {
   border-radius: 50%;
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
+  width: 22em;
+  height: 22em;
+  object-fit: cover; /* Mantém o ajuste, mas veremos mais da imagem */
+  object-position: 20% 35%; /* Posiciona a imagem para mostrar mais da parte superior */
+
 }
 
 .about-text {
-  max-width: 600px;
-  margin-left: 2em;
+  max-width: 55%;
+  /*margin-left: 2em;*/
   box-sizing: border-box; /* Inclui padding e border na largura */
+  text-align: justify;
 }
 
 @media (max-width: 768px) {
@@ -307,6 +310,8 @@ p, ul {
   .about-text {
     margin-left: 0;
     margin-top: 1em;
+    max-width: 90%;
+
   }
 
   .about-photo img {
