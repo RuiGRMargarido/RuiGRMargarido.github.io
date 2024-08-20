@@ -774,6 +774,14 @@ imagem da salamandra a pellets
     width: 100%; /* Garante que o iframe ocupe toda a largura disponível */
     height: 100%;
   }
+  .iframe-container img {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 80%;
+    height: 75%;
+    border: 0;
+  }
 
   /* Estilo adicional para a seção de experiência profissional */
   .experience-container {
