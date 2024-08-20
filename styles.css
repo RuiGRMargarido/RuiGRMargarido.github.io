@@ -874,6 +874,9 @@ imagem da salamandra a pellets
   height: 3.5em; /* Tamanho do ícone */
   transition: transform 0.3s ease; /* Animação suave ao passar o mouse */
 }
+.bitbucket-icon:hover {
+  transform: scale(1.2); /* Aumenta ligeiramente o ícone ao passar o mouse */
+}
 
 .github-icon{
   padding-top: 0.8em;
@@ -881,4 +884,8 @@ imagem da salamandra a pellets
   width: 3.3em; /* Tamanho do ícone */
   height: 3em; /* Tamanho do ícone */
   transition: transform 0.3s ease; /* Animação suave ao passar o mouse */
+}
+
+.github-icon:hover {
+  transform: scale(1.2); /* Aumenta ligeiramente o ícone ao passar o mouse */
 }
