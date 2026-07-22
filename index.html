@@ -9,13 +9,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playwrite+CU:wght@100..400&family=Playwrite+PE:wght@100..400&display=swap" rel="stylesheet">
-
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <!-- Slick CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -41,15 +35,8 @@
   <ul>
     <li><a href="#home" class="nav-logo">Rui Margarido</a></li>
     <li><a href="#about">About Me</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#software-engineering">
-      <span class="nav-title">Software Engineer</span>
-      <span class="nav-title-mobile">Software</span>
-    </a></li>
-    <li><a href="#mechanical-engineering">
-      <span class="nav-title2">Mechanical Engineer</span>
-      <span class="nav-title2-mobile">Mechanical</span>
-    </a></li>
+    <li><a href="#journey">Journey</a></li>
+    <li><a href="#projects">Projects</a></li>
     <li>
       <a href="https://www.linkedin.com/in/rui-margarido-4a5b49142/" target="_blank">
         <img src="free-linkedin-logo.png" alt="LinkedIn" class="social-icon">
@@ -75,527 +62,518 @@
   </div>
 </section>
 
-<section id="education">
-  <h2>Education</h2>
-  <div class="education-container">
-    <div class="education-item">
-      <h3>Instituto Superior de Engenharia do Porto</h3>
-      <p>Bachelor’s degree in Software Engineering (ongoing, 2nd year finished)</p>
-      <p><em>2023 - Ongoing</em></p>
-    </div>
-    <div class="education-item">
-      <h3>Universidade de Aveiro</h3>
-      <p>Integrated Master Degree in Mechanical Engineering</p>
-      <p><em>2008 - 2013</em></p>
-    </div>
-    <div class="education-item">
-      <h3>Ordem dos Engenheiros</h3>
-      <p>Effective Member No. 86522</p>
-      <p><em>Since 2021</em></p>
-    </div>
-  </div>
-  <div class="additional-training-container">
-    <h4>Additional Training</h4>
-    <div class="additional-training">
-      <div class="training-item">
-        <p>HVAC Designer, AS Formação (2021)</p>
+<section id="journey">
+  <h2>Journey</h2>
+  <ol class="timeline-list">
+
+    <li class="timeline-node" data-track="mechanical" data-type="degree">
+      <span class="timeline-marker"></span>
+      <div class="timeline-content">
+        <div class="timeline-meta">
+          <span class="timeline-date">2008 - 2013</span>
+          <span class="badge badge--type">Degree</span>
+          <span class="badge badge--track badge--mechanical">Mechanical</span>
+        </div>
+        <h3>Universidade de Aveiro</h3>
+        <p>Integrated Master Degree in Mechanical Engineering</p>
       </div>
-      <div class="training-item">
-        <p>Continuous Improvement Training, Kaizen Institute (2016)</p>
+    </li>
+
+    <li class="timeline-node" data-track="mechanical" data-type="job">
+      <span class="timeline-marker"></span>
+      <div class="timeline-content">
+        <div class="timeline-meta">
+          <span class="timeline-date">04/2014 - 01/2016</span>
+          <span class="badge badge--type">Job</span>
+          <span class="badge badge--track badge--mechanical">Mechanical</span>
+        </div>
+        <h3>Engineer at Jamarcol</h3>
+        <p>Laser tube cutting implementation and precision metalworking processes.</p>
+        <a class="timeline-link" href="#proj-jamarcol">View role &rarr;</a>
       </div>
-      <div class="training-item">
-        <p>Training in Solidworks Essentials Plus, Sqedio (2016)</p>
+    </li>
+
+    <li class="timeline-node" data-track="mechanical" data-type="certification">
+      <span class="timeline-marker"></span>
+      <div class="timeline-content">
+        <div class="timeline-meta">
+          <span class="timeline-date">2016</span>
+          <span class="badge badge--type">Certification</span>
+          <span class="badge badge--track badge--mechanical">Mechanical</span>
+        </div>
+        <h3>Continuous Improvement Training</h3>
+        <p>Kaizen Institute</p>
       </div>
-    </div>
-  </div>
+    </li>
+
+    <li class="timeline-node" data-track="mechanical" data-type="certification">
+      <span class="timeline-marker"></span>
+      <div class="timeline-content">
+        <div class="timeline-meta">
+          <span class="timeline-date">2016</span>
+          <span class="badge badge--type">Certification</span>
+          <span class="badge badge--track badge--mechanical">Mechanical</span>
+        </div>
+        <h3>Solidworks Essentials Plus</h3>
+        <p>Sqedio</p>
+      </div>
+    </li>
+
+    <li class="timeline-node" data-track="mechanical" data-type="job">
+      <span class="timeline-marker"></span>
+      <div class="timeline-content">
+        <div class="timeline-meta">
+          <span class="timeline-date">02/2016 - 03/2018</span>
+          <span class="badge badge--type">Job</span>
+          <span class="badge badge--track badge--mechanical">Mechanical</span>
+        </div>
+        <h3>Engineer at LWC Metal (Testa Group)</h3>
+        <p>Laser cutting, punching and bending processes; production management system implementation.</p>
+        <a class="timeline-link" href="#proj-lwc">View role &rarr;</a>
+      </div>
+    </li>
+
+    <li class="timeline-node is-ongoing" data-track="mechanical" data-type="job">
+      <span class="timeline-marker"></span>
+      <div class="timeline-content">
+        <div class="timeline-meta">
+          <span class="timeline-date">04/2018 - Present</span>
+          <span class="badge badge--type badge--ongoing">Ongoing</span>
+          <span class="badge badge--track badge--mechanical">Mechanical</span>
+        </div>
+        <h3>Production Manager at Baptista e Irmão SA</h3>
+        <p>Leading the mesh factory: process improvement, waste reduction and resource optimization.</p>
+        <p class="timeline-note">Concurrent with software engineering studies at ISEP since 2023.</p>
+        <a class="timeline-link" href="#proj-bil">View role &rarr;</a>
+      </div>
+    </li>
+
+    <li class="timeline-node" data-track="mechanical" data-type="certification">
+      <span class="timeline-marker"></span>
+      <div class="timeline-content">
+        <div class="timeline-meta">
+          <span class="timeline-date">2021</span>
+          <span class="badge badge--type">Certification</span>
+          <span class="badge badge--track badge--mechanical">Mechanical</span>
+        </div>
+        <h3>HVAC Designer</h3>
+        <p>AS Formação</p>
+      </div>
+    </li>
+
+    <li class="timeline-node" data-track="mechanical" data-type="certification">
+      <span class="timeline-marker"></span>
+      <div class="timeline-content">
+        <div class="timeline-meta">
+          <span class="timeline-date">Since 2021</span>
+          <span class="badge badge--type">Certification</span>
+          <span class="badge badge--track badge--mechanical">Mechanical</span>
+        </div>
+        <h3>Ordem dos Engenheiros</h3>
+        <p>Effective Member No. 86522</p>
+      </div>
+    </li>
+
+    <li class="timeline-node is-ongoing" data-track="software" data-type="degree">
+      <span class="timeline-marker"></span>
+      <div class="timeline-content">
+        <div class="timeline-meta">
+          <span class="timeline-date">2023 - Ongoing</span>
+          <span class="badge badge--type badge--ongoing">Ongoing</span>
+          <span class="badge badge--track badge--software">Software</span>
+        </div>
+        <h3>Instituto Superior de Engenharia do Porto</h3>
+        <p>Bachelor's degree in Software Engineering (2nd year finished)</p>
+        <p class="timeline-note">Concurrent with the Production Manager role at BIL.</p>
+      </div>
+    </li>
+
+  </ol>
 </section>
 
-<section id="software-engineering">
-  <h2>Software Engineering</h2>
-  <div class="software-projects">
+<section id="projects">
+  <h2>Projects</h2>
 
-    <div class="project-row">
-      <div class="project-item">
-        <div class="project-details">
-          <h3>Integrative Project: Drone Light Show Management</h3>
-          <p>Project developed during the 4th semester of the Computer Engineering degree, focused on the creation of an integrated platform to manage drone light shows. The system supports features such as drone fleet registration, flight formation configuration, customer request management, show proposal generation, DSL-based script validation, and real-time drone simulation. The backend communicates with a remote database server via TCP sockets, applying Domain-Driven Design (DDD) principles and using Object-Relational Mapping (ORM) for persistence. The project integrates concepts from Computer Networks (RCOMP), Computer Systems (SCOMP), Application Engineering (EAPLI), and Programming Languages (LPROG), using Java, SQL, C, POSIX threads, shared memory, and ANTLR4 to build a robust, modular, and extensible system.
-          </p>
-          <br/>
-          <a href="assets/Sem4PI_Project_Requirements_v03c.pdf" target="_blank">📄 Integrative Project Assignment 4th Semester</a>
+  <p class="section-lede">As a Mechanical Engineer with several years of experience in the metalworking industry, and now a Software Engineering student, I have developed a broad and versatile skill set across both disciplines. Below is a unified, filterable view of my software projects and mechanical engineering roles. While most of the mechanical videos are not from the companies mentioned, they accurately illustrate some of the processes I have been involved in.</p>
 
-          <br>
+  <div class="filter-bar">
+    <button type="button" class="filter-btn is-active" data-filter="all">All</button>
+    <button type="button" class="filter-btn" data-filter="software">Software</button>
+    <button type="button" class="filter-btn" data-filter="mechanical">Mechanical</button>
+  </div>
 
-          <div class = "icones-repo">
-            <a href="https://github.com/Departamento-de-Engenharia-Informatica/sem4pi-2024-2025-sem4pi_2024_2025_g81" target="_blank">
-              <img src="GitHub-Logo-3821918866.png" alt="GitHub" class="github-icon">
-            </a>
-          </div>
-          <div class="project-skills">
-            <h4>Skills Used</h4>
-            <ul class="skills-list">
-              <li>Java</li>
-              <li>POO</li>
-              <li>ORM</li>
-              <li>Domain Driven Design (DDD)</li>
-              <li>Plugin System</li>
-              <li>CI/CD</li>
-              <li>C</li>
-              <li>POSIX Threads</li>
-              <li>Concurrent Programming</li>
-              <li>Shared Memory</li>
-              <li>Sockets</li>
-              <li>TCP</li>
-              <li>ANTLR4</li>
-              <li>SCRUM</li>
-              <li>Test-Driven Development (TDD)</li>
-              <li>GitHub</li>
-            </ul>
-          </div>
-        </div>
-<br>
+  <div class="projects-grid">
 
-        <h4>Main program (Java) and Simulator Plugin (C)</h4>
-        <div class="project-video">
-          <iframe width="800" height="450" src="https://www.youtube.com/embed/siPJO_Q3HZ4;vq=hd1080" frameborder="2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <iframe width="800" height="450" src="https://www.youtube.com/embed/oSLu7S6SIKM;vq=hd1080" frameborder="2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-        </div>
-
-
+    <div class="case-card" id="proj-sem4" data-track="software" data-type="project">
+      <div class="case-card__meta">
+        <span class="badge badge--type">Project</span>
+        <span class="badge badge--track badge--software">Software</span>
+        <span class="timeline-date">Sem 4 &middot; 2024/25</span>
       </div>
-      <div class="project-item">
-        <div class="project-details">
-          <h3>Integrative Project: Industrial Production Management</h3>
-          <p>Integrative project developed during the 3rd semester of the Computer Engineering degree, focused on designing and implementing a software solution for managing production in project-oriented and short-run industrial facilities. The application was built iteratively across three sprints and includes product and operations modeling (BOM and BOO), production simulation, machine control with sensor integration, production order planning, and a relational database built in PL/SQL. The solution integrates multiple technologies and paradigms, including Java, C/Assembly, and SQL, and covers key areas such as Computer Architecture (ARQCP), Databases (BDDAD), Information Structures (ESINF), Applied Physics (FSIAP), and Object-Oriented Development. The project follows agile SCRUM methodology (LAPR3) and Test-Driven Development (TDD) best practices.
-          </p>
-          <br/>
-          <a href="assets/sem3_pi_2024_25_en_v1_7.pdf" target="_blank">📄 Integrative Project Assignment 3rd Semester</a>
-
-          <div class = "icones-repo">
-            <a href="https://github.com/Departamento-de-Engenharia-Informatica/SEM3_PI_24-25_g312" target="_blank">
-              <img src="GitHub-Logo-3821918866.png" alt="GitHub" class="github-icon">
-            </a>
-          </div>
-          <div class="project-skills">
-            <h4>Skills Used</h4>
-            <ul class="skills-list">
-              <li>Java</li>
-              <li>POO</li>
-              <li>C</li>
-              <li>Assembly</li>
-              <li>PL/SQL</li>
-              <li>Data Structures</li>
-              <li>SCRUM</li>
-              <li>Test-Driven Development (TDD)</li>
-              <li>Raspberry Pi Pico</li>
-              <li>GitHub</li>
-            </ul>
-          </div>
+      <h3>Integrative Project: Drone Light Show Management</h3>
+      <p>Project developed during the 4th semester of the Computer Engineering degree, focused on the creation of an integrated platform to manage drone light shows. The system supports features such as drone fleet registration, flight formation configuration, customer request management, show proposal generation, DSL-based script validation, and real-time drone simulation. The backend communicates with a remote database server via TCP sockets, applying Domain-Driven Design (DDD) principles and using Object-Relational Mapping (ORM) for persistence. The project integrates concepts from Computer Networks (RCOMP), Computer Systems (SCOMP), Application Engineering (EAPLI), and Programming Languages (LPROG), using Java, SQL, C, POSIX threads, shared memory, and ANTLR4 to build a robust, modular, and extensible system.</p>
+      <a href="assets/Sem4PI_Project_Requirements_v03c.pdf" target="_blank">📄 Integrative Project Assignment 4th Semester</a>
+      <div class="icones-repo">
+        <a href="https://github.com/Departamento-de-Engenharia-Informatica/sem4pi-2024-2025-sem4pi_2024_2025_g81" target="_blank">
+          <img src="GitHub-Logo-3821918866.png" alt="GitHub" class="github-icon">
+        </a>
+      </div>
+      <div class="project-skills">
+        <h4>Skills Used</h4>
+        <ul class="skills-list">
+          <li>Java</li>
+          <li>POO</li>
+          <li>ORM</li>
+          <li>Domain Driven Design (DDD)</li>
+          <li>Plugin System</li>
+          <li>CI/CD</li>
+          <li>C</li>
+          <li>POSIX Threads</li>
+          <li>Concurrent Programming</li>
+          <li>Shared Memory</li>
+          <li>Sockets</li>
+          <li>TCP</li>
+          <li>ANTLR4</li>
+          <li>SCRUM</li>
+          <li>Test-Driven Development (TDD)</li>
+          <li>GitHub</li>
+        </ul>
+      </div>
+      <h4 class="case-card__video-caption">Main program (Java) and Simulator Plugin (C)</h4>
+      <div class="project-video">
+        <div class="iframe-container">
+          <iframe src="https://www.youtube.com/embed/siPJO_Q3HZ4;vq=hd1080" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-<br>
-
-        <h4>SPRINT 1 and SPRINT 3 videos</h4>
-        <div class="project-video">
-          <iframe width="800" height="450" src="https://www.youtube.com/embed/VcDoIQG8Eig;vq=hd1080" frameborder="2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-          <iframe width="800" height="450" src="https://www.youtube.com/embed/yg8l56qi0s4;vq=hd1080" frameborder="2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="iframe-container">
+          <iframe src="https://www.youtube.com/embed/oSLu7S6SIKM;vq=hd1080" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
     </div>
 
-
-
-
-
-
-    <div class="project-row">
-      <div class="project-item">
-        <div class="project-details">
-          <h3>Integrative Project: Green Space Management</h3>
-          <p>Development of an IT solution to support the management of collective green spaces, including team management, vehicles, machinery, and equipment, optimization of irrigation and lighting systems, and the production of statistical indicators.
-          </p>
-          <div class = "icones-repo">
-            <a href="https://github.com/LopemigueISEP/lei-24-s2-1nb-g312" target="_blank">
-              <img src="GitHub-Logo-3821918866.png" alt="GitHub" class="github-icon">
-            </a>
-          </div>
-          <div class="project-skills">
-            <h4>Skills Used</h4>
-            <ul class="skills-list">
-              <li>Java</li>
-              <li>POO</li>
-              <li>SCRUM</li>
-              <li>Test-Driven Development (TDD)</li>
-              <li>JavaFX</li>
-              <li>Jupyter Notebook</li>
-              <li>Python</li>
-              <li>GitHub</li>
-            </ul>
-          </div>
-        </div>
-        <div class="project-video">
-          <iframe width="800" height="450" src="https://www.youtube.com/embed/ydv0Sc4sZMM;vq=hd1080" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+    <div class="case-card" id="proj-sem3" data-track="software" data-type="project">
+      <div class="case-card__meta">
+        <span class="badge badge--type">Project</span>
+        <span class="badge badge--track badge--software">Software</span>
+        <span class="timeline-date">Sem 3 &middot; 2024/25</span>
       </div>
-      <div class="project-item">
-        <div class="project-details">
-          <h3>Design and development of a web page to showcase my professional portfolio</h3>
-          <p>The creation of this web page stemmed from the recognition of the importance of having an online portfolio where I can showcase the skills I have been acquiring over time. In this personal project, I took the opportunity to further explore HTML and CSS, as well as to introduce myself, even if only at a basic level, to JavaScript.</p>
-          <div class = "icones-repo">
-            <a href="https://github.com/RuiGRMargarido/RuiGRMargarido.github.io" target="_blank">
-              <img src="GitHub-Logo-3821918866.png" alt="GitHub" class="github-icon">
-            </a>
-          </div>
-          <div class="project-skills">
-            <h4>Skills Used</h4>
-            <ul class="skills-list">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>Java Script</li>
-              <li>GitHub</li>
-            </ul>
-          </div>
+      <h3>Integrative Project: Industrial Production Management</h3>
+      <p>Integrative project developed during the 3rd semester of the Computer Engineering degree, focused on designing and implementing a software solution for managing production in project-oriented and short-run industrial facilities. The application was built iteratively across three sprints and includes product and operations modeling (BOM and BOO), production simulation, machine control with sensor integration, production order planning, and a relational database built in PL/SQL. The solution integrates multiple technologies and paradigms, including Java, C/Assembly, and SQL, and covers key areas such as Computer Architecture (ARQCP), Databases (BDDAD), Information Structures (ESINF), Applied Physics (FSIAP), and Object-Oriented Development. The project follows agile SCRUM methodology (LAPR3) and Test-Driven Development (TDD) best practices.</p>
+      <a href="assets/sem3_pi_2024_25_en_v1_7.pdf" target="_blank">📄 Integrative Project Assignment 3rd Semester</a>
+      <div class="icones-repo">
+        <a href="https://github.com/Departamento-de-Engenharia-Informatica/SEM3_PI_24-25_g312" target="_blank">
+          <img src="GitHub-Logo-3821918866.png" alt="GitHub" class="github-icon">
+        </a>
+      </div>
+      <div class="project-skills">
+        <h4>Skills Used</h4>
+        <ul class="skills-list">
+          <li>Java</li>
+          <li>POO</li>
+          <li>C</li>
+          <li>Assembly</li>
+          <li>PL/SQL</li>
+          <li>Data Structures</li>
+          <li>SCRUM</li>
+          <li>Test-Driven Development (TDD)</li>
+          <li>Raspberry Pi Pico</li>
+          <li>GitHub</li>
+        </ul>
+      </div>
+      <h4 class="case-card__video-caption">SPRINT 1 and SPRINT 3 videos</h4>
+      <div class="project-video">
+        <div class="iframe-container">
+          <iframe src="https://www.youtube.com/embed/VcDoIQG8Eig;vq=hd1080" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <div class="project-video">
-          <iframe width="800" height="450" src="https://www.youtube.com/embed/rT3j0bD34NI?si=8wOr0b0Xd557Ultf;vq=hd1080" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="iframe-container">
+          <iframe src="https://www.youtube.com/embed/yg8l56qi0s4;vq=hd1080" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
     </div>
-    <div class="project-row">
-      <div class="project-item">
-        <div class="project-details">
-          <h3>Organizador de Garantias - a Warranty Organizer</h3>
-          <p>By choosing a topic that we consider impactful in today’s world, the objective was to create a product and present it, in this case by developing a webpage and simulating the creation of a mobile application for organizing warranties.</p>
-          <div class = "icones-repo">
-            <a href="https://bitbucket.org/2023-24-lapr1-na-nb-2-lost/2023-24_lapr1-na-nb_2-lost/src/master/" target="_blank">
-              <img src="Bitbucket-Logo-Atlassian-3001725101.png" alt="Bitbucket" class="bitbucket-icon">
-            </a>
-          </div>
-          <div class="project-skills">
-            <h4>Skills Used</h4>
-            <ul class="skills-list">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>Bitbucket</li>
-              <li>Trello</li>
-              <li>Miro</li>
-              <li>SCRUM</li>
-            </ul>
-          </div>
-        </div>
-        <div class="project-video">
-          <iframe width="800" height="450" src="https://www.youtube.com/embed/5MXS-Gkzm8Q;vq=hd1080" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+
+    <div class="case-card" id="proj-lei" data-track="software" data-type="project">
+      <div class="case-card__meta">
+        <span class="badge badge--type">Project</span>
+        <span class="badge badge--track badge--software">Software</span>
+        <span class="timeline-date">LEI &middot; 2023/24</span>
       </div>
-      <div class="project-item">
-        <div class="project-details">
-          <h3>Study of the algorithms of the Euler method and the 4th order Runge-Kutta method</h3>
-          <p>The objective of this project is to develop a Java application that models the epidemic consumption of drugs using a system of first-order ordinary differential equations (ODEs). The SIR model (Susceptible, Infected, Recovered) was used to represent the dynamics of drug consumption within a population. Numerical methods, specifically the Euler and 4th order Runge-Kutta methods, were employed to solve the ODEs. Finally, a comparison of the results obtained from both methods was conducted.</p>
-          <div class = "icones-repo">
-            <a href="https://bitbucket.org/rmprojects/lapr1_1na_grupo02/src/main/" target="_blank">
-              <img src="Bitbucket-Logo-Atlassian-3001725101.png" alt="Bitbucket" class="bitbucket-icon">
-            </a>
-          </div>
-          <div class="project-skills">
-            <h4>Skills Used</h4>
-            <ul class="skills-list">
-              <li>Java</li>
-              <li>Bitbucket</li>
-              <li>Trello</li>
-              <li>SCRUM</li>
-            </ul>
-          </div>
-        </div>
-        <div class="project-video">
-          <iframe width="800" height="450" src="https://www.youtube.com/embed/dS5PB-fDius;vq=hd1080" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <h3>Integrative Project: Green Space Management</h3>
+      <p>Development of an IT solution to support the management of collective green spaces, including team management, vehicles, machinery, and equipment, optimization of irrigation and lighting systems, and the production of statistical indicators.</p>
+      <div class="icones-repo">
+        <a href="https://github.com/LopemigueISEP/lei-24-s2-1nb-g312" target="_blank">
+          <img src="GitHub-Logo-3821918866.png" alt="GitHub" class="github-icon">
+        </a>
+      </div>
+      <div class="project-skills">
+        <h4>Skills Used</h4>
+        <ul class="skills-list">
+          <li>Java</li>
+          <li>POO</li>
+          <li>SCRUM</li>
+          <li>Test-Driven Development (TDD)</li>
+          <li>JavaFX</li>
+          <li>Jupyter Notebook</li>
+          <li>Python</li>
+          <li>GitHub</li>
+        </ul>
+      </div>
+      <div class="project-video">
+        <div class="iframe-container">
+          <iframe src="https://www.youtube.com/embed/ydv0Sc4sZMM;vq=hd1080" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
     </div>
-<!--    <div class="additional-projects">-->
-<!--      <h3>Additional Projects</h3>-->
-<!--      <div class="additional-projects-container">-->
-<!--        <a href="https://github.com/youradditionalproject1" target="_blank">Additional Project 1</a>-->
-<!--        <a href="https://github.com/youradditionalproject2" target="_blank">Additional Project 2</a>-->
-<!--        <a href="https://github.com/youradditionalproject3" target="_blank">Additional Project 3</a>-->
-<!--        <a href="https://github.com/youradditionalproject4" target="_blank">Additional Project 4</a>-->
-<!--      </div>-->
-<!--    </div>-->
+
+    <div class="case-card" id="proj-portfolio" data-track="software" data-type="project">
+      <div class="case-card__meta">
+        <span class="badge badge--type">Project</span>
+        <span class="badge badge--track badge--software">Software</span>
+        <span class="timeline-date">Personal</span>
+      </div>
+      <h3>Design and development of a web page to showcase my professional portfolio</h3>
+      <p>The creation of this web page stemmed from the recognition of the importance of having an online portfolio where I can showcase the skills I have been acquiring over time. In this personal project, I took the opportunity to further explore HTML and CSS, as well as to introduce myself, even if only at a basic level, to JavaScript.</p>
+      <div class="icones-repo">
+        <a href="https://github.com/RuiGRMargarido/RuiGRMargarido.github.io" target="_blank">
+          <img src="GitHub-Logo-3821918866.png" alt="GitHub" class="github-icon">
+        </a>
+      </div>
+      <div class="project-skills">
+        <h4>Skills Used</h4>
+        <ul class="skills-list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Java Script</li>
+          <li>GitHub</li>
+        </ul>
+      </div>
+      <div class="project-video">
+        <div class="iframe-container">
+          <iframe src="https://www.youtube.com/embed/rT3j0bD34NI?si=8wOr0b0Xd557Ultf;vq=hd1080" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-card" id="proj-garantias" data-track="software" data-type="project">
+      <div class="case-card__meta">
+        <span class="badge badge--type">Project</span>
+        <span class="badge badge--track badge--software">Software</span>
+        <span class="timeline-date">LAPR1 &middot; 2023/24</span>
+      </div>
+      <h3>Organizador de Garantias - a Warranty Organizer</h3>
+      <p>By choosing a topic that we consider impactful in today's world, the objective was to create a product and present it, in this case by developing a webpage and simulating the creation of a mobile application for organizing warranties.</p>
+      <div class="icones-repo">
+        <a href="https://bitbucket.org/2023-24-lapr1-na-nb-2-lost/2023-24_lapr1-na-nb_2-lost/src/master/" target="_blank">
+          <img src="Bitbucket-Logo-Atlassian-3001725101.png" alt="Bitbucket" class="bitbucket-icon">
+        </a>
+      </div>
+      <div class="project-skills">
+        <h4>Skills Used</h4>
+        <ul class="skills-list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Bitbucket</li>
+          <li>Trello</li>
+          <li>Miro</li>
+          <li>SCRUM</li>
+        </ul>
+      </div>
+      <div class="project-video">
+        <div class="iframe-container">
+          <iframe src="https://www.youtube.com/embed/5MXS-Gkzm8Q;vq=hd1080" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-card" id="proj-euler" data-track="software" data-type="project">
+      <div class="case-card__meta">
+        <span class="badge badge--type">Project</span>
+        <span class="badge badge--track badge--software">Software</span>
+        <span class="timeline-date">LAPR1 &middot; 2023/24</span>
+      </div>
+      <h3>Study of the algorithms of the Euler method and the 4th order Runge-Kutta method</h3>
+      <p>The objective of this project is to develop a Java application that models the epidemic consumption of drugs using a system of first-order ordinary differential equations (ODEs). The SIR model (Susceptible, Infected, Recovered) was used to represent the dynamics of drug consumption within a population. Numerical methods, specifically the Euler and 4th order Runge-Kutta methods, were employed to solve the ODEs. Finally, a comparison of the results obtained from both methods was conducted.</p>
+      <div class="icones-repo">
+        <a href="https://bitbucket.org/rmprojects/lapr1_1na_grupo02/src/main/" target="_blank">
+          <img src="Bitbucket-Logo-Atlassian-3001725101.png" alt="Bitbucket" class="bitbucket-icon">
+        </a>
+      </div>
+      <div class="project-skills">
+        <h4>Skills Used</h4>
+        <ul class="skills-list">
+          <li>Java</li>
+          <li>Bitbucket</li>
+          <li>Trello</li>
+          <li>SCRUM</li>
+        </ul>
+      </div>
+      <div class="project-video">
+        <div class="iframe-container">
+          <iframe src="https://www.youtube.com/embed/dS5PB-fDius;vq=hd1080" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-card" id="proj-bil" data-track="mechanical" data-type="role">
+      <div class="case-card__meta">
+        <span class="badge badge--type badge--ongoing">Role &middot; Ongoing</span>
+        <span class="badge badge--track badge--mechanical">Mechanical</span>
+        <span class="timeline-date">04/2018 - Present</span>
+      </div>
+      <div class="case-card__header">
+        <img class="case-card__logo" src="Logos%20empresas/logo%20BIL.png" alt="Baptista e Irmão SA logo">
+        <div>
+          <h3>Production Manager at Baptista e Irmão SA</h3>
+          <a class="case-card__company-link" href="https://www.bil.pt" target="_blank">www.bil.pt</a>
+        </div>
+      </div>
+      <p>The company's business model is built on two key pillars: the in-house production of various products, such as welded wire mesh and fencing panels, and the distribution of products, including tubes and metal sheets. To ensure excellence in these areas, company invested in advanced technology to continuously enhance product quality and meet the evolving demands of the market. As the Production Manager of the mesh factory, I have been actively involved in improving processes, reducing waste, and optimizing resources. Additionally, I have ensured strict compliance with deadlines and customer requirements, ensuring operational efficiency and the satisfaction of our partners.</p>
+      <div class="project-skills">
+        <h4>Skills Used</h4>
+        <ul class="skills-list">
+          <li>Team Management</li>
+          <li>Production Planning and Scheduling</li>
+          <li>Operational Efficiency</li>
+          <li>Process Optimization</li>
+          <li>Problem-Solving and Decision-Making</li>
+          <li>Inventory Management</li>
+          <li>Equipment Operation and Maintenance</li>
+          <li>Lean Manufacturing</li>
+          <li>Expertise in Wire Processing</li>
+        </ul>
+      </div>
+      <div class="project-video">
+        <div class="iframe-container">
+          <iframe src="https://www.youtube.com/embed/xMN8IV48sJ4;vq=hd1080" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="iframe-container">
+          <iframe src="https://www.youtube.com/embed/faMzKEGTnkI;vq=hd1080" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="iframe-container">
+          <iframe src="https://www.youtube.com/embed/JriTjcIMwPM;vq=hd1080" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="iframe-container">
+          <iframe src="https://www.youtube.com/embed/f4Sr_G1-pDg;vq=hd1080" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-card" id="proj-lwc" data-track="mechanical" data-type="role">
+      <div class="case-card__meta">
+        <span class="badge badge--type">Role</span>
+        <span class="badge badge--track badge--mechanical">Mechanical</span>
+        <span class="timeline-date">02/2016 - 03/2018</span>
+      </div>
+      <div class="case-card__header">
+        <img class="case-card__logo" src="Logos%20empresas/logo_lwc.bmp" alt="LWC Metal logo">
+        <div>
+          <h3>Engineer at Laser Welding Coating Metal (LWC - Metal)</h3>
+          <a class="case-card__company-link" href="https://www.lwc-metal.pt" target="_blank">www.lwc-metal.pt</a>
+          <p class="case-card__sublabel">a testa group company</p>
+          <a class="case-card__company-link" href="https://www.testa.pt" target="_blank">www.testa.pt</a>
+        </div>
+      </div>
+      <p>LWC Metal specializes in the development, manufacturing, and supply of advanced solutions for natural ventilation, smoke and heat extraction, daylighting, and fire protection. As part of the TESTA Group, the company provides comprehensive metalworking services, including 2D laser cutting, punching, bending, welding, and coating, primarily to meet the internal needs of the group.
+        <br>
+        From the very beginning, I have played a crucial role in the company, with primary responsibilities in implementing laser cutting, punching, bending and all it's processes. Additionally, I was deeply involved in the implementation of the production management system, the industrialization of highly complex products, and the cost analysis of new products.</p>
+      <div class="project-skills">
+        <h4>Skills Used</h4>
+        <ul class="skills-list">
+          <li>CAD Software (AutoCAD, SolidWorks)</li>
+          <li>Computer-Aided Manufacturing (CAM)</li>
+          <li>Project Management</li>
+          <li>Teamwork and Collaboration</li>
+          <li>Lean Manufacturing</li>
+          <li>Laser and Punch Cutting Technology Expertise</li>
+          <li>Bending Technology Expertise</li>
+        </ul>
+      </div>
+      <div class="project-video">
+        <div class="iframe-container">
+          <img src="salamandraPellets.bmp" alt="Imagem de salamandra Pellets">
+        </div>
+        <div class="iframe-container">
+          <iframe src="https://www.youtube.com/embed/jOsPY8L3eIY;vq=hd1080" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="iframe-container">
+          <iframe src="https://www.youtube.com/embed/tYyy1BuPbhk;vq=hd1080" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="iframe-container">
+          <iframe src="https://www.youtube.com/embed/j_DkkZsKka4;vq=hd1080" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-card" id="proj-jamarcol" data-track="mechanical" data-type="role">
+      <div class="case-card__meta">
+        <span class="badge badge--type">Role</span>
+        <span class="badge badge--track badge--mechanical">Mechanical</span>
+        <span class="timeline-date">04/2014 - 01/2016</span>
+      </div>
+      <div class="case-card__header">
+        <img class="case-card__logo" src="Logos%20empresas/logo_jamarcol.bmp" alt="Jamarcol logo">
+        <div>
+          <h3>Engineer at Jamarcol</h3>
+          <a class="case-card__company-link" href="https://www.jamarcol.com/" target="_blank">www.jamarcol.com</a>
+        </div>
+      </div>
+      <p>Jamarcol offers a diverse range of metalworking services, mastering the entire value chain from metal forming, surface treatment, to assembly and packaging. Their expertise includes sheet metal forming, tube forming, welding, surface treatment, and assembly. This comprehensive approach allows Jamarcol to serve various industries effectively. In particular, I was involved in the implementation of laser tube cutting and all associated processes, enhancing the company's capabilities in precision metalworking.</p>
+      <div class="project-skills">
+        <h4>Skills Used</h4>
+        <ul class="skills-list">
+          <li>Laser Tube Cutting Technology Expertise</li>
+          <li>Process Optimization</li>
+          <li>CAD/CAM Proficiency</li>
+          <li>Material Knowledge</li>
+          <li>Quality Control</li>
+        </ul>
+      </div>
+      <div class="project-video">
+        <div class="iframe-container">
+          <iframe src="https://www.youtube.com/embed/pFqjN4YJEow;vq=hd1080" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="iframe-container">
+          <iframe src="https://www.youtube.com/embed/HxC3q42LiU0?start=240&end=290;vq=hd1080" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
-
-<section id="mechanical-engineering">
-  <h2>Mechanical Engineering</h2>
-
-  <div class="section-content">
-    <h3>Professional Introduction</h3>
-    <p>As a Mechanical Engineer with several years of experience in the metalworking industry, I have developed a broad and versatile skill set. My expertise in working with tubes, sheet metal, and wire has been a key asset throughout my professional journey, enabling me to contribute effectively to a wide range of projects and challenges. Below, I present my professional journey. While most of the videos are not from the companies mentioned, they accurately illustrate some of the processes in which I have been involved.</p>
-  </div>
-
-  <div class="section-content">
-    <h3>Professional Experience</h3>
-
-    <div class="experience-container">
-
-      <!-- BIL   -->
-
-      <div class="experience-item">
-        <div class="experience-image">
-          <img src="Logos%20empresas/logo%20BIL.png" alt="center">
-        </div>
-        <div class="experience-details">
-          <div class="heading-container">
-            <h3>Production Manager at Baptista e Irmão SA</h3>
-
-          </div>
-          <div class="tempo">
-            <h4>(04/2018 - Present)</h4>
-          </div>
-          <div class="company-link-container">
-            <a href="https://www.bil.pt" target="_blank">www.bil.pt</a>
-          </div>
-
-
-          <p>The company’s business model is built on two key pillars: the in-house production of various products, such as welded wire mesh and fencing panels, and the distribution of products, including tubes and metal sheets. To ensure excellence in these areas, company invested in advanced technology to continuously enhance product quality and meet the evolving demands of the market. As the Production Manager of the mesh factory, I have been actively involved in improving processes, reducing waste, and optimizing resources. Additionally, I have ensured strict compliance with deadlines and customer requirements, ensuring operational efficiency and the satisfaction of our partners.</p>
-        </div>
-        <div class="experience-videos">
-          <div class="iframe-container">
-            <iframe src="https://www.youtube.com/embed/xMN8IV48sJ4;vq=hd1080" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="iframe-container">
-            <iframe src="https://www.youtube.com/embed/faMzKEGTnkI;vq=hd1080" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="iframe-container">
-            <iframe src="https://www.youtube.com/embed/JriTjcIMwPM;vq=hd1080" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="iframe-container">
-            <iframe src="https://www.youtube.com/embed/f4Sr_G1-pDg;vq=hd1080" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-        </div>
-        <div class="section-content">
-          <h3>Technical Skills</h3>
-          <ul class="mechanical-skills-list">
-            <li>Team Management</li>
-            <li>Production Planning and Scheduling</li>
-            <li>Operational Efficiency</li>
-            <li>Process Optimization</li>
-            <li>Problem-Solving and Decision-Making</li>
-            <li>Inventory Management</li>
-            <li>Equipment Operation and Maintenance</li>
-            <li>Lean Manufacturing</li>
-            <li>Expertise in Wire Processing</li>
-
-          </ul>
-        </div>
-      </div>
-
-      <!-- LWC  -->
-
-      <div class="experience-item">
-        <div class="experience-image">
-          <img src="Logos%20empresas/logo_lwc.bmp" alt="center">
-
-        </div>
-        <div class="experience-details">
-          <div class="heading-container">
-            <h3>  Engineer at Laser Welding Coating Metal (LWC - Metal)</h3>
-          </div>
-          <div class="tempo">
-            <h4>(02/2016 - 03/2018)</h4>
-          </div>
-
-
-          <div class = "company-link-container">
-            <a href="https://www.lwc-metal.pt" target="_blank">www.lwc-metal.pt/</a>
-          </div>
-          <div class="testa">
-            <h4>a testa group company</h4>
-          </div>
-
-          <div class = "company-link-container">
-            <a href="https://www.testa.pt" target="_blank">www.testa.pt/</a>
-          </div>
-
-          <p>LWC Metal specializes in the development, manufacturing, and supply of advanced solutions for natural ventilation, smoke and heat extraction, daylighting, and fire protection. As part of the TESTA Group, the company provides comprehensive metalworking services, including 2D laser cutting, punching, bending, welding, and coating, primarily to meet the internal needs of the group.
-            <br>
-            From the very beginning, I have played a crucial role in the company, with primary responsibilities in implementing laser cutting, punching, bending and all it's processes. Additionally, I was deeply involved in the implementation of the production management system, the industrialization of highly complex products, and the cost analysis of new products. </p>
-        </div>
-        <div class="experience-videos">
-          <div class="iframe-container">
-            <img src="salamandraPellets.bmp" alt="Imagem de salamandra Pellets">
-          </div>
-          <div class="iframe-container">
-            <iframe src="https://www.youtube.com/embed/jOsPY8L3eIY;vq=hd1080" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="iframe-container">
-            <iframe src="https://www.youtube.com/embed/tYyy1BuPbhk;vq=hd1080" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="iframe-container">
-            <iframe src="https://www.youtube.com/embed/j_DkkZsKka4;vq=hd1080" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-        </div>
-        <div class="section-content">
-          <h3>Technical Skills</h3>
-          <ul class="mechanical-skills-list">
-            <li>CAD Software (AutoCAD, SolidWorks)</li>
-            <li>Computer-Aided Manufacturing (CAM)</li>
-            <li>Project Management</li>
-            <li>Teamwork and Collaboration</li>
-            <li>Lean Manufacturing</li>
-            <li>Laser and Punch Cutting Technology Expertise</li>
-            <li>Bending Technology Expertise</li>
-          </ul>
-        </div>
-      </div>
-
-
-      <!-- Jamarcol   -->
-
-      <div class="experience-item">
-        <div class="experience-image">
-          <img src="Logos%20empresas/logo_jamarcol.bmp" alt="center">
-        </div>
-        <div class="experience-details">
-          <div class="heading-container">
-            <h3>  Engineer at Jamarcol </h3>
-          </div>
-          <div class="tempo">
-            <h4>(04/2014 - 01/2016)</h4>
-          </div>
-
-          <div class = "company-link-container">
-            <a href="https://www.jamarcol.com/" target="_blank">www.jamarcol.com</a>
-          </div>
-
-          <p>Jamarcol offers a diverse range of metalworking services, mastering the entire value chain from metal forming, surface treatment, to assembly and packaging. Their expertise includes sheet metal forming, tube forming, welding, surface treatment, and assembly. This comprehensive approach allows Jamarcol to serve various industries effectively. In particular, I was involved in the implementation of laser tube cutting and all associated processes, enhancing the company’s capabilities in precision metalworking. </p>
-        </div>
-        <div class="experience-videos">
-          <div class="iframe-container">
-            <iframe src="https://www.youtube.com/embed/pFqjN4YJEow;vq=hd1080" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="iframe-container">
-            <iframe src="https://www.youtube.com/embed/HxC3q42LiU0?start=240&end=290;vq=hd1080" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-        </div>
-        <div class="section-content">
-          <h3>Technical Skills</h3>
-          <ul class="mechanical-skills-list">
-            <li>Laser Tube Cutting Technology Expertise</li>
-            <li>Process Optimization</li>
-            <li>CAD/CAM Proficiency</li>
-            <li>Material Knowledge</li>
-            <li>Quality Control</li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-
-</section>
-
 
 <footer>
   <p>&copy; 2024 by Rui Margarido. Proudly created with HTML, CSS and a little bit of Javascript</p>
 </footer>
 
-<!-- Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<!-- Inicialize o Swiper -->
 <script>
-  const swiper = new Swiper('.swiper-container', {
-    effect: 'coverflow',
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: 'auto',
-    coverflowEffect: {
-      rotate: 50,
-      stretch: 0,
-      depth: 100,
-      modifier: 1,
-      slideShadows: true,
-    },
-    pagination: {
-      el: '.swiper-pagination',
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('is-active'));
+      this.classList.add('is-active');
+      var filter = this.getAttribute('data-filter');
+      document.querySelectorAll('.case-card').forEach(card => {
+        var match = filter === 'all' || card.getAttribute('data-track') === filter;
+        card.style.display = match ? '' : 'none';
+      });
+    });
   });
 
-  window.addEventListener('scroll', function() {
-    var nav = document.querySelector('nav');
-    var header = document.querySelector('header');
-    var body = document.body;
-
-    if (window.scrollY >= header.offsetHeight) {
-      nav.classList.add('fixed');
-      body.classList.add('fixed-nav-padding');
-    } else {
-      nav.classList.remove('fixed');
-      body.classList.remove('fixed-nav-padding');
-    }
-  });
-
-  document.querySelectorAll('nav a').forEach(anchor => {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
-      // Verifica se o href começa com '#', ou seja, é um link interno
-      if (this.getAttribute('href').startsWith('#')) {
-        e.preventDefault();
-        var target = document.querySelector(this.getAttribute('href'));
-        var offset = document.querySelector('nav').offsetHeight;
+      var href = this.getAttribute('href');
+      if (href.length > 1) {
+        var target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          var offset = document.querySelector('nav').offsetHeight;
 
-        window.scrollTo({
-          top: target.offsetTop - offset,
-          behavior: 'smooth'
-        });
+          window.scrollTo({
+            top: target.offsetTop - offset,
+            behavior: 'smooth'
+          });
+        }
       }
     });
   });
 </script>
 
-<!-- Slick JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-<!-- Inicialize o Slick -->
-<script>
-  $(document).ready(function(){
-    $('.slick-carousel').slick({
-      dots: true,
-      infinite: true,
-      speed: 300,
-      slidesToShow: 3,
-      adaptiveHeight: true,
-      prevArrow: '<button type="button" class="slick-prev">&#10094;</button>',
-      nextArrow: '<button type="button" class="slick-next">&#10095;</button>',
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            infinite: true,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
-      ]
-    });
-  });
-</script>
 </body>
 </html>
