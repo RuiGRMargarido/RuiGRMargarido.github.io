@@ -9,5 +9,6 @@ module.exports = merge(common, {
     hot: true,
     open: true,
     static: ['./'],
+    port: process.env.PORT || 8080,
   },
 });

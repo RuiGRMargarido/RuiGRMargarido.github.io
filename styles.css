@@ -1,937 +1,816 @@
-html {
-  scroll-behavior: smooth;
-  height: 100%;
-  overflow-x: hidden; /* Evita a barra de rolagem horizontal */
+/* =========================================================
+   Constellation — a redesign for Rui Margarido's portfolio
+   Palette: warm paper light-mode with a deep-space navy hero.
+   Type: Fraunces (display serif) + Inter (body sans).
+   Two accent colors mark the two concurrent career tracks:
+     copper  = mechanical engineering track
+     teal    = software engineering track
+   This is a deliberate single-world design (it does not follow
+   the OS light/dark preference) — see commit message.
+   ========================================================= */
+
+:root {
+  --navy: #0b1220;
+  --navy-soft: #141d33;
+  --star: #eef2ff;
+
+  --paper: #ffffff;
+  --paper-raised: #ffffff;
+  --ink: #1c2430;
+  --ink-soft: #5b6472;
+  --line: #e2e4e8;
+
+  --copper: #b5651d;
+  --copper-soft: #f4e3d0;
+  --teal: #12796f;
+  --teal-soft: #d9f0ec;
+
+  --radius: 14px;
+  --shadow: 0 1px 2px rgba(28, 36, 48, 0.04), 0 8px 24px rgba(28, 36, 48, 0.06);
+
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
-/* navegação*/
-nav {
-  background-color: #444;
-  padding: 1em;
-  text-align: center;
-  width: 100%;
-  transition: all 0.3s ease-in-out; /* Transição suave */
-  box-sizing: border-box; /* Inclui padding e border na largura */
-}
-
-
-
-nav.fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  height: auto; /* Ou ajuste conforme necessário */
-}
-
-/* Estilo padrão para desktop */
-.nav-title-mobile,
-.nav-title2-mobile {
-  display: none; /* Oculta o texto reduzido no desktop */
-}
-
-
-body.fixed-nav-padding {
-  padding-top: 6em; /* Ajuste conforme necessário para altura da navegação */
-}
-
-/*body*/
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f0f0f0;
-  overflow-x: hidden; /* Evita a barra de rolagem horizontal */
-}
-
-header {
-  background: url('Fundo topo 8.webp') no-repeat center center;
-  background-size: cover;
-  color: #000000;
-  text-align: center;
-  height: 90vh; /* Ocupa 100% da altura da tela */
-  width: 100%; /* Ocupa 100% da largura da tela */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative; /* Define o contexto de posicionamento dos elementos filhos */
-  box-sizing: border-box; /* Inclui padding e border na largura */
-}
-
-header .header-content {
-  position: absolute;
-  top: 44%; /* Ajuste este valor para a posição vertical desejada */
-  left: 50%; /* Ajuste este valor para a posição horizontal desejada */
-  transform: translate(-50%, -70%); /* Centraliza o texto */
-  text-align: center;
-}
-
-header h1 {
-  font-size: 2.7em; /* Ajuste o tamanho da fonte do título */
-  margin: 0;
-}
-
-header p {
-  font-size: 1.5em; /* Ajuste o tamanho da fonte do parágrafo */
-  margin: 0;
-}
-
-
-
-/*
-Dimensionamento para dispositivos moveis
- */
-
-
-@media (max-width: 768px) {
-
-  body.fixed-nav-padding {
-    padding-top: 8em; /* Ajuste conforme necessário para altura da navegação */
-  }
-
-
-  /*
-dimensionamento da imagem do topo para dispositivos moveis
- */
-  header {
-
-    height: 55vh; /* Reduz a altura do header em dispositivos móveis */
-    padding: 0 1em; /* Adiciona um padding lateral */
-  }
-
-  header .header-content {
-    top: 50%;
-    transform: translate(-25%, -40%); /* Centraliza o texto */
-  }
-
-  header h1 {
-    font-size: 1.5em; /* Reduz o tamanho da fonte do título */
-    color: black;
-  }
-
-  header p {
-    font-size: 0.8em; /* Reduz o tamanho da fonte do parágrafo */
-    color: black;
-  }
-
-  .about-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-text {
-    margin-left: 0;
-    margin-top: 1em;
-  }
-
-  .about-photo img {
-    width: 150px;
-    height: 150px;
-  }
-
-  /*
-fim do dimensionamento da imagem do topo para dispositivos moveis
- */
-
-  /*
-barra de navegação em dispositivos moveis
- */
-  nav {
-    padding: 0.2em 0.5em; /* Reduz o padding da barra de navegação */
-    height: auto; /* Deixa a altura da barra automática, ajustando ao conteúdo */
-    display: flex;
-    align-items: center; /* Centraliza os itens verticalmente */
-    justify-content: center; /* Centraliza os itens horizontalmente */
-  }
-
-  nav ul {
-    display: flex;
-    flex-direction: row; /* Mantém os links em linha */
-    justify-content: center; /* Centraliza os links horizontalmente */
-    padding: 0; /* Remove o padding interno */
-    margin: 0; /* Remove qualquer margem extra */
-    width: 100%; /* Garante que o `ul` ocupe toda a largura disponível */
-  }
-
-  nav ul li {
-    flex: 1 1 22%; /* Define a largura de cada item, aqui 20% para duas colunas */
-    margin: 0; /* Adiciona espaço ao redor de cada link */
-    text-align: center; /* Centraliza o texto dentro de cada link */
-
-  }
-
-  nav ul li a {
-    padding: 0.1em 0.2em; /* Reduz o padding dentro dos links */
-    font-size: 0.9em; /* Reduz o tamanho da fonte dos links */
-    display: block; /* Garante que os links ocupem toda a altura disponível */
-    text-align: center; /* Centraliza o texto dos links */
-  }
-
-  nav .nav-logo {
-    font-size: 0.8em; /* Reduz o tamanho da fonte do logo na navegação */
-    display: block;
-    text-align: center; /* Centraliza o texto do logo */
-    padding: 0; /* Remove o padding ao redor do logo */
-    margin: 0; /* Remove a margem ao redor do logo */
-  }
-
-  .nav-title {
-    display: none;
-  }
-
-  .nav-title-mobile {
-    display: inline-block; /* Mostra o texto reduzido */
-  }
-
-  .nav-title2 {
-    display: none;
-  }
-
-  .nav-title2-mobile {
-    display: inline-block; /* Mostra o texto reduzido */
-  }
-
-
-
-}
-
-/*
-fim dimensionamento para dispositivos moveis
- */
-
-/*
-dimensionamento para desktop
- */
-
-
-
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center; /* Centraliza os itens da navegação */
-  align-items: center; /* Alinha os itens verticalmente */
-  flex-wrap: wrap; /* Permite que itens quebrem linha se necessário */
-}
-
-nav ul li {
-  margin: 0 1em;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  display: block;
-  padding: 0.5em; /* Aumenta a área clicável */
-}
-
-nav ul li a.nav-logo {
-  font-family: "Dancing Script", cursive; /* Aplica a fonte*/
-  font-size: 1.5em; /* Ajuste o tamanho conforme necessário */
-}
-
-section {
-  padding: 2em;
-  background-color: #fff;
-  margin: 1em 0;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box; /* Inclui padding e border na largura */
-}
-
-
-
-section::before {
-  content: "";
-  display: flex;
-  height: 6em; /* Espaço para compensar a navegação fixa */
-  margin-top: -4em; /* Compensa a altura adicionada */
-  visibility: hidden; /* Garante que o espaço não seja visível */
-}
-
-footer {
-  text-align: center;
-  padding: 1em 0;
-  background-color: #333;
-  color: #fff;
-  width: 100%; /* Garante que o rodapé ocupe toda a largura */
-  box-sizing: border-box; /* Inclui padding e border na largura */
-}
-
-h1, h2 {
-  margin: 0.5em 0;
-}
-
-p, ul {
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-}
-
-.about-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  margin: 2em 0;
-  flex-wrap: wrap; /* Permite que itens quebrem linha se necessário */
-  box-sizing: border-box; /* Inclui padding e border na largura */
-}
-
-/* Estilo padrão para navegadores (desktop) */
-.about-container {
-  flex-direction: row; /* A imagem aparecerá depois do texto */
-}
-
-.about-photo img {
-  border-radius: 50%;
-  width: 22em;
-  height: 22em;
-  object-fit: cover; /* Mantém o ajuste, mas veremos mais da imagem */
-  object-position: 20% 35%; /* Posiciona a imagem para mostrar mais da parte superior */
-
-}
-
-.about-text {
-  max-width: 55%;
-  /*margin-left: 2em;*/
-  box-sizing: border-box; /* Inclui padding e border na largura */
-  text-align: justify;
-}
-
-@media (max-width: 768px) {
-  .about-container {
-    flex-direction: column-reverse;
-    text-align: center;
-  }
-
-  .about-text {
-    margin-left: 0;
-    margin-top: 1em;
-    max-width: 90%;
-
-  }
-
-  .about-photo img {
-    width: 150px;
-    height: 150px;
-  }
-
-  .experience-container {
-    display: flex;
-    flex-direction: column; /* Organiza os itens em uma coluna */
-    align-items: center; /* Centraliza os itens horizontalmente */
-    padding: 1em; /* Adiciona padding para espaçamento interno */
-    box-sizing: border-box; /* Garante que padding seja incluído na largura */
-    overflow-x: hidden; /* Impede que o conteúdo transborde horizontalmente */
-    width: 100%; /* Garante que o contêiner ocupe toda a largura da tela */
-  }
-
-  .experience-item {
-    display: flex;
-    flex-direction: column; /* Alinha os elementos em coluna */
-    align-items: center; /* Centraliza os itens horizontalmente */
-    text-align: center; /* Centraliza o texto */
-    width: 100%; /* Garante que cada item ocupe toda a largura disponível */
-    box-sizing: border-box; /* Inclui padding e borda na largura */
-    margin-bottom: 0.1em; /* Espaçamento entre os itens */
-  }
-
-  .experience-details {
-    width: 100%; /* Garante que o texto ocupe toda a largura disponível */
-    padding: 1em; /* Adiciona padding ao redor do texto */
-    box-sizing: border-box; /* Inclui padding e borda na largura */
-    overflow-wrap: break-word; /* Impede que o texto saia da tela */
-  }
-
-  .experience-videos {
-    display: flex;
-    flex-direction: column; /* Alinha os vídeos em uma linha */
-    justify-content: flex-start; /* Alinha os vídeos à esquerda */
-    flex-wrap: nowrap; /* Impede que os vídeos quebrem em várias linhas */
-    overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
-    gap: 1em; /* Adiciona espaço entre os vídeos */
-    width: 100%; /* Garante que o contêiner ocupe toda a largura */
-    padding: 1em 0; /* Adiciona espaçamento ao redor do contêiner */
-  }
-
-  .iframe-container {
-    width: 100%;
-    max-width: 250px; /* Define um tamanho máximo para os vídeos/imagens */
-    margin: 0 auto; /* Centraliza os vídeos/imagens */
-  }
-
-  /*logo e texto de BIL*/
-  .heading-container {
-    display: flex;
-    flex-direction: column; /* Organiza os itens em coluna */
-    align-items: center; /* Centraliza os itens horizontalmente */
-    text-align: center; /* Centraliza o texto */
-    margin-bottom: 1em; /* Adiciona espaço abaixo do heading */
-  }
-
-  .heading-container h3 {
-    order: 1; /* Coloca o texto abaixo da imagem */
-    margin-top: 0.1em; /* Adiciona espaço entre a imagem e o texto */
-    margin-bottom: 10em; /* Remove margem inferior extra */
-  }
-
-  .heading-container img {
-    order: 5; /* Mantém a imagem acima do texto */
-    max-width: 300px; /* Define uma largura máxima para a imagem */
-    height: auto; /* Mantém a proporção da imagem */
-  }
-
-  .heading-container h4 {
-    order: 3; /* Mantém a data abaixo do título */
-    margin-top: 0.5em; /* Adiciona espaço entre o título e a data */
-  }
-
-}
-
-.education-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
-  justify-content: space-between;
-  box-sizing: border-box; /* Inclui padding e border na largura */
-}
-
-.education-item {
-  background-color: #fff;
-  padding: 1em;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  flex: 1 1 calc(33% - 1em); /* Permite que os itens fiquem na mesma linha com largura igual */
-  box-sizing: border-box; /* Inclui padding e border na largura */
-}
-
-.additional-training-container {
-  margin-top: 1em;
-}
-
-.additional-training {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
-  justify-content: space-between;
-  box-sizing: border-box; /* Inclui padding e border na largura */
-}
-
-.training-item {
-  background-color: #fff;
-  padding: 1em;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  flex: 1 1 calc(33% - 1em); /* Permite que os itens fiquem na mesma linha com largura igual */
-  box-sizing: border-box; /* Inclui padding e border na largura */
-}
-
-/* Inicia a parte de software engineering */
-.software-projects {
-  display: flex;
-  flex-direction: column;
-  gap: 2em;
-  box-sizing: border-box; /* Inclui padding e border na largura */
-}
-
-.project-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 2em;
-  flex-wrap: wrap; /* Permite que itens quebrem linha se necessário */
-  box-sizing: border-box; /* Inclui padding e border na largura */
-}
-
-.project-item {
-  display: flex;
-  flex-direction: column;
-  background-color: #fff;
-  padding: 1em;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  flex: 1 1 48%; /* Permite que dois itens fiquem lado a lado */
-  box-sizing: border-box; /* Inclui padding e border na largura */
-}
-
-.project-details {
-  flex: 3;
-  padding-right: 1em;
-  box-sizing: border-box; /* Inclui padding e border na largura */
-}
-
-.project-video {
-  flex: 3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1em;
-  box-sizing: border-box; /* Inclui padding e border na largura */
-}
-
-.project-video iframe {
-  max-width: 80%;
-  height: 300px;
-  box-sizing: border-box; /* Inclui padding e border na largura */
-}
-
-.project-item h3 {
-  margin-top: 0;
-}
-
-.project-skills {
-  margin-top: 1em;
-}
-
-.skills-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5em;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box; /* Inclui padding e border na largura */
-}
-
-.skills-list li {
-  background-color: #e0e0e0;
-  padding: 0.5em 1em;
-  border-radius: 8px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  margin-bottom: 0.5em;
-  box-sizing: border-box; /* Inclui padding e border na largura */
-}
-
-.additional-projects {
-  margin-top: 2em;
-  text-align: center;
-  box-sizing: border-box; /* Inclui padding e border na largura */
-}
-
-.additional-projects-container {
-  display: flex;
-  justify-content: center;
-  gap: 1em;
-  flex-wrap: wrap;
-  box-sizing: border-box; /* Inclui padding e border na largura */
-}
-
-.additional-projects a {
-  background-color: #007bff;
-  color: white;
-  padding: 0.5em 1em;
-  border-radius: 8px;
-  text-decoration: none;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box; /* Inclui padding e border na largura */
-}
-
-.additional-projects a:hover {
-  background-color: #0056b3;
-}
-
-/*Mechanical Engineering*/
-
-.heading-container {
-  display: flex;
-  align-items: center; /* Alinha verticalmente o h3 e o h4 */
-}
-
-h3 {
-  display: flex;
-  align-items: center; /* Alinha a imagem e o texto verticalmente */
-  /*margin: 0; /* Remove a margem padrão do h3 */
-}
-
-h3 img {
-  vertical-align: middle;
-  margin-right: 1em; /* Espaçamento entre a imagem e o texto */
-  max-height: 6em;
-  margin-bottom: 0.0em;
-}
-
-h4 {
-  margin: 0; /* Remove a margem padrão do h4 */
-  padding-bottom: 1em;
-}
-
-.company-link-container {
-  padding-bottom: 1em;
-}
-
-.company-link-container a {
-  display: inline-block;
-  text-decoration: none; /* Remove o sublinhado do link */
-  color: #007bff; /* Cor do link */
-  font-weight: bold; /* Deixa o link em negrito */
-}
-
-
-.experience-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2em;
-}
-
-.experience-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap; /* Permite que itens quebrem linha se necessário */
-  gap: 1em;
-  padding: 1.5em;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+* {
   box-sizing: border-box;
 }
 
-.experience-details {
-  flex: 1 1 60%;
-  padding-right: 2em;
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+  overflow-x: hidden;
 }
 
-.experience-videos {
-  flex: 1 1 40%;
-}
-
-.skills-list {
-  list-style-type: none;
-  padding: 0;
+body {
   margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
 }
 
-.skills-list li {
-  margin: 0.5em 0;
+img {
+  max-width: 100%;
+  display: block;
 }
 
-.video-library {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--ink);
+  line-height: 1.2;
+  margin: 0 0 0.5em;
 }
 
-.video-library li {
-  margin: 0.5em 0;
-}
-
-.video-library a {
+a {
+  color: var(--teal);
   text-decoration: none;
-  color: #007bff;
 }
-
-.video-library a:hover {
+a:hover, a:focus-visible {
   text-decoration: underline;
 }
 
-/* Estilo adicional para a seção de experiência profissional */
-.experience-container {
-  background-color: #494646;
-  padding: 2em;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2em;
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--paper-raised);
+  color: var(--ink);
+  padding: 0.75rem 1.25rem;
+  z-index: 999;
+  border-radius: 0 0 8px 0;
+}
+.skip-link:focus {
+  left: 0;
 }
 
+/* =====================
+   Hero / intro animation
+   ===================== */
 
+.hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(120% 120% at 50% 0%, var(--navy-soft) 0%, var(--navy) 60%);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+#constellation-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: block;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+
+.hero-photo {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(238, 242, 255, 0.35);
+  box-shadow: 0 0 0 8px rgba(238, 242, 255, 0.06), 0 20px 45px rgba(0, 0, 0, 0.45);
+  margin-bottom: 1.75rem;
+}
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero h1 {
+  color: var(--star);
+  font-size: clamp(2.8rem, 7vw, 4.6rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.4em;
+}
+
+.hero-tagline {
+  color: rgba(238, 242, 255, 0.78);
+  font-size: clamp(1.15rem, 2.4vw, 1.45rem);
+  margin: 0 0 2rem;
+}
+.hero-tagline .in-progress {
+  color: var(--teal);
+  opacity: 0.9;
+}
+
+.hero-socials {
+  list-style: none;
+  display: flex;
+  gap: 0.9rem;
+  margin: 0;
+  padding: 0;
+}
+.hero-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(238, 242, 255, 0.92);
+  border: 1px solid rgba(238, 242, 255, 0.18);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.hero-socials a:hover {
+  background: #ffffff;
+  transform: translateY(-2px);
+}
+.hero-socials img {
+  width: 27px;
+  height: 27px;
+  object-fit: contain;
+}
+
+.scroll-cue {
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 26px;
+  height: 42px;
+  border: 2px solid rgba(238, 242, 255, 0.4);
+  border-radius: 20px;
+}
+.scroll-cue span {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  width: 4px;
+  height: 8px;
+  margin-left: -2px;
+  border-radius: 2px;
+  background: rgba(238, 242, 255, 0.85);
+  animation: scroll-cue-move 1.8s ease-in-out infinite;
+}
+@keyframes scroll-cue-move {
+  0%   { top: 8px; opacity: 1; }
+  70%  { top: 20px; opacity: 0.2; }
+  100% { top: 20px; opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-cue span {
+    animation: none;
+    top: 8px;
+    opacity: 0.6;
+  }
+}
+
+/* =====================
+   Nav
+   ===================== */
+
+#navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+#navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 1.25rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+#navbar a {
+  color: var(--ink-soft);
+  font-weight: 500;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+}
+#navbar a:hover, #navbar a:focus-visible {
+  color: var(--ink);
+  text-decoration: none;
+}
+#navbar a.nav-logo {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--ink);
+  font-size: 1.5rem;
+}
+.nav-title-mobile, .nav-title2-mobile {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .nav-title, .nav-title2 {
+    display: none;
+  }
+  .nav-title-mobile, .nav-title2-mobile {
+    display: inline;
+  }
+}
+.social-icon {
+  width: 28px;
+  height: 28px;
+}
+
+/* =====================
+   Section base
+   ===================== */
+
+section {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+  scroll-margin-top: 64px;
+}
+section h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  margin-bottom: 1.5rem;
+}
+
+/* About */
+
+.about-text p {
+  color: var(--ink-soft);
+  white-space: pre-line;
+  font-size: 1.08rem;
+  text-align: justify;
+  hyphens: auto;
+}
+.about-text p::first-letter {
+  font-family: var(--font-display);
+  font-size: 3.4em;
+  font-weight: 600;
+  line-height: 0.82;
+  float: left;
+  padding-right: 0.1em;
+  color: var(--ink);
+}
+
+/* =====================
+   Journey / Timeline
+   ===================== */
+
+.journey-intro {
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.legend {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.legend-dot.mech { background: var(--copper); }
+.legend-dot.soft { background: var(--teal); }
+
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--line);
+  transform: translateX(-50%);
+}
+
+/* "Now" marker — divides what's already happened from what's still ongoing */
+.timeline-now {
+  position: relative;
+  height: 1px;
+  margin: 0 0 2.75rem;
+  list-style: none;
+}
+.timeline-now::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 220px;
+  transform: translateX(-50%);
+  border-top: 2px dashed var(--teal);
+}
+.timeline-now-label {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%);
+  background: var(--paper);
+  padding: 0.2em 0.85em;
+  border: 1px solid var(--teal);
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--teal);
+  white-space: nowrap;
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 0 3rem 3rem;
+}
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-node {
+  position: absolute;
+  top: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--paper-raised);
+  border: 2px solid var(--copper);
+  color: var(--copper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 6px var(--paper);
+}
+.timeline-item.left .timeline-node { right: -23px; }
+.timeline-item.right .timeline-node { left: -23px; }
+.timeline-node svg { width: 22px; height: 22px; }
+
+.timeline-item.soft .timeline-node {
+  border-color: var(--teal);
+  color: var(--teal);
+}
+
+.timeline-item.ongoing .timeline-node {
+  animation: pulse-ring 2.4s ease-out infinite;
+}
+@keyframes pulse-ring {
+  0%   { box-shadow: 0 0 0 6px var(--paper), 0 0 0 6px var(--paper); }
+  70%  { box-shadow: 0 0 0 6px var(--paper), 0 0 0 14px rgba(181, 101, 29, 0); }
+  100% { box-shadow: 0 0 0 6px var(--paper), 0 0 0 14px rgba(181, 101, 29, 0); }
+}
+.timeline-item.soft.ongoing .timeline-node {
+  animation-name: pulse-ring-soft;
+}
+@keyframes pulse-ring-soft {
+  0%   { box-shadow: 0 0 0 6px var(--paper), 0 0 0 6px var(--paper); }
+  70%  { box-shadow: 0 0 0 6px var(--paper), 0 0 0 14px rgba(18, 121, 111, 0); }
+  100% { box-shadow: 0 0 0 6px var(--paper), 0 0 0 14px rgba(18, 121, 111, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .timeline-item.ongoing .timeline-node {
+    animation: none;
+  }
+}
+
+.timeline-card {
+  display: inline-block;
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.4rem;
+  box-shadow: var(--shadow);
+  max-width: 420px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+.timeline-item.left .timeline-card { text-align: right; }
+.timeline-item.right .timeline-card { text-align: left; }
+
+/* Clickable cards (jobs and projects that link to their full entry) */
+a.timeline-card {
+  cursor: pointer;
+}
+a.timeline-card:hover,
+a.timeline-card:focus-visible {
+  border-color: var(--copper);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(28, 36, 48, 0.1);
+  text-decoration: none;
+}
+.timeline-item.soft a.timeline-card:hover,
+.timeline-item.soft a.timeline-card:focus-visible {
+  border-color: var(--teal);
+}
+
+/* Type eyebrow — Degree / Job / Certification / Project, shown on every card */
+.timeline-eyebrow {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--copper);
+  margin-bottom: 0.35em;
+}
+.timeline-item.soft .timeline-eyebrow {
+  color: var(--teal);
+}
+
+.timeline-item.degree .timeline-card {
+  position: relative;
+  background: var(--copper-soft);
+  border: 2px solid var(--copper);
+  max-width: 440px;
+}
+.timeline-item.soft.degree .timeline-card {
+  background: var(--teal-soft);
+  border-color: var(--teal);
+}
+.timeline-item.degree .timeline-card::before {
+  content: "";
+  position: absolute;
+  top: 0.9rem;
+  bottom: 0.9rem;
+  width: 4px;
+  border-radius: 2px;
+  background: var(--copper);
+}
+.timeline-item.soft.degree .timeline-card::before {
+  background: var(--teal);
+}
+.timeline-item.degree.left .timeline-card::before { left: -8px; }
+.timeline-item.degree.right .timeline-card::before { right: -8px; }
+
+.timeline-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--copper);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.timeline-item.soft .timeline-date { color: var(--teal); }
+
+.timeline-card h3 {
+  font-size: 1.1rem;
+  margin: 0.4em 0 0.3em;
+}
+.timeline-card p {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.ongoing-pill {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.15em 0.6em;
+  border-radius: 999px;
+  background: var(--copper-soft);
+  color: var(--copper);
+  vertical-align: middle;
+}
+.ongoing-pill.soft {
+  background: var(--teal-soft);
+  color: var(--teal);
+}
+
+.timeline-note {
+  position: relative;
+  width: 100%;
+  padding: 0 1.5rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+.timeline-note p {
+  display: inline-block;
+  max-width: 60ch;
+  margin: 0 auto;
+  padding: 1.1rem 1.5rem;
+  background: var(--paper-raised);
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+.timeline-note strong {
+  color: var(--ink);
+}
+
+@media (max-width: 720px) {
+  .timeline::before {
+    left: 22px;
+  }
+  .timeline-now::before {
+    left: 22px;
+    width: 140px;
+    transform: none;
+  }
+  .timeline-now-label {
+    left: 22px;
+    transform: translate(-50%, -50%);
+  }
+  .timeline-item,
+  .timeline-item.left,
+  .timeline-item.right {
+    width: 100%;
+    left: 0;
+    text-align: left;
+    padding: 0 0 2.5rem 3.5rem;
+  }
+  .timeline-item.left .timeline-node,
+  .timeline-item.right .timeline-node {
+    left: 0;
+    right: auto;
+  }
+  .timeline-item.left .timeline-card,
+  .timeline-item.right .timeline-card {
+    text-align: left;
+  }
+}
+
+/* =====================
+   Experience (mechanical, detailed)
+   ===================== */
+
+.section-content {
+  color: var(--ink-soft);
+  margin-bottom: 2rem;
+}
+.section-content > p {
+  text-align: justify;
+  hyphens: auto;
+}
+
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
 
 .experience-item {
-  display: flex; /* Define como flexbox */
-  flex-direction: row; /* Organiza os filhos em uma linha */
-  align-items: center; /* Alinha o conteúdo ao centro verticalmente */
-  justify-content: center; /* Centraliza as colunas horizontalmente */
-  gap: 2em; /* Espaço entre as colunas */
-  margin-bottom: 1.5em; /* Espaço inferior entre as experiências */
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 2rem;
+  scroll-margin-top: 96px;
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.experience-item > .section-content {
+  grid-column: 1 / -1;
+  max-width: none;
+  margin-bottom: 0;
 }
 
 .experience-image {
-  flex: 0 0 26%; /* A imagem ocupa 30% da largura */
-  max-width: 26%; /* Garante que a imagem não ultrapasse 30% */
-  display: flex; /* Adiciona flexbox ao contêiner da imagem */
-  align-items: center; /* Centraliza a imagem verticalmente */
-  justify-content: center; /* Centraliza a imagem horizontalmente */
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
-
 .experience-image img {
-  width: 100%; /* Imagem ocupa toda a largura da coluna */
-  height: auto; /* Mantém a proporção da imagem */
-  object-fit: cover; /* Ajusta a imagem dentro do contêiner */
+  max-width: 100%;
+  max-height: 90px;
+  object-fit: contain;
 }
 
-.experience-details {
-  flex: 1 1 60%;
-  padding-right: 2em;
+.experience-details h3 {
+  font-size: 1.3rem;
+}
+.tempo h4 {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--copper);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0 0 0.6em;
+}
+.company-link-container {
+  margin-bottom: 0.4em;
+}
+.testa h4 {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  font-weight: 500;
+  margin: 0.6em 0 0.2em;
+}
+.experience-details p {
+  color: var(--ink-soft);
+  text-align: justify;
+  hyphens: auto;
 }
 
 .experience-videos {
-  flex: 1 1 40%;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 0.5rem;
 }
-
-
-
-.experience-details strong {
-  font-size: 1.2em;
-  color: #333;
+.iframe-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--navy);
 }
-
-.skills-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
-}
-
-.skills-list li {
-  background-color: #e0e0e0;
-  padding: 0.5em 1em;
-  border-radius: 8px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-/*
-imagem da salamandra a pellets
- */
 .iframe-container iframe,
 .iframe-container img {
   position: absolute;
-  top: 0;
-  left: 28%;
-  width: 45%;
+  inset: 0;
+  width: 100%;
   height: 100%;
   border: 0;
+  object-fit: cover;
+}
+.iframe-container.image-container img {
+  position: static;
+  object-fit: cover;
 }
 
-
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .slick-carousel {
-    width: 100%;
-  }
-
-  .experience-item {
-    flex-direction: column;
-    margin-bottom: 0.05em; /* Ajuste do espaçamento entre os itens */
-  }
-
-  .experience-details {
-    align-content: center;
-    padding: 0.1em;
-  }
-
-  .heading-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 0.5em; /* Reduzido para diminuir o espaço após o texto */
-  }
-
-  .heading-container h3 {
-    order: 1;
-    margin-top: 0.1em;
-    margin-bottom: 0.5em; /* Reduzido para diminuir o espaço após o texto */
-  }
-
-  .heading-container img {
-    order: 5;
-    max-width: 80%; /* Ajuste conforme necessário */
-    height: auto;
-    margin-bottom: 0.5em; /* Espaço reduzido */
-  }
-
-  .heading-container h4 {
-    order: 3;
-    margin-top: 0.5em;
-    margin-bottom: 0; /* Remove qualquer margem extra */
-  }
-
-  .experience-videos {
-    width: 100%; /* Garante que os vídeos ocupem 100% da largura disponível */
-    padding-right: 0; /* Remove qualquer padding desnecessário */
-  }
-
-  .experience-image {
-    flex: 0 0 90%; /* A imagem ocupa 30% da largura */
-    max-width: 90%; /* Garante que a imagem não ultrapasse 30% */
-    display: flex; /* Adiciona flexbox ao contêiner da imagem */
-    align-items: center; /* Centraliza a imagem verticalmente */
-    justify-content: center; /* Centraliza a imagem horizontalmente */
-  }
-
-  .experience-image img {
-    width: 100%; /* Imagem ocupa toda a largura da coluna */
-    height: auto; /* Mantém a proporção da imagem */
-    object-fit: cover; /* Ajusta a imagem dentro do contêiner */
-  }
-
-  .iframe-container {
-    padding-bottom: 56.25%; /* Mantém a proporção de 16:9 */
-    height: 0;
-    overflow: hidden;
-  }
-
-  .iframe-container iframe {
-    width: 100%; /* Garante que o iframe ocupe toda a largura disponível */
-    height: 100%;
-  }
-  .iframe-container img {
-    position: absolute;
-    top: 0;
-    left: 10%;
-    width: 80%;
-    height: 75%;
-    border: 0;
-  }
-
-  /* Estilo adicional para a seção de experiência profissional */
-  .experience-container {
-    background-color: #494646;
-    padding: 0.5em;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 0.5em;
-  }
-
-  .section-content{
-    text-align: center;
-
-  }
-
-  .education-item {
-    flex: 1 1 calc(80% - 1em); /* Permite que os itens fiquem na mesma linha com largura igual */
-  }
-
-  .training-item {
-    flex: 1 1 calc(80% - 1em); /* Permite que os itens fiquem na mesma linha com largura igual */
-
-  }
-
-}
-
-
-
-
-.experience-videos {
+.mechanical-skills-list,
+.skills-list {
+  list-style: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Centraliza os vídeos */
-  gap: 1em; /* Espaçamento entre os vídeos */
-}
-
-.iframe-container {
-  flex: 1 1 calc(50% - 1em); /* 2 vídeos por linha */
-  max-height: 300px; /* Define a altura máxima dos vídeos */
-  display: flex;
-  justify-content: center; /* Centraliza o vídeo dentro do contêiner */
-  align-items: center;
-  position: relative;
-  padding-bottom: calc(600px / 1.78); /* Mantém a proporção 16:9 para 300px de altura */
-  height: 0;
-}
-
-.iframe-container iframe {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Centraliza o vídeo */
-  width: 80%;
-  height: 80%;
-  border: 0;
-}
-
-/*!*contactos*/
-
-/* *!*/
-
-
-/*.contact-container {*/
-/*  display: flex;*/
-/*  justify-content: center; !* Centraliza o ícone horizontalmente *!*/
-/*  align-items: center; !* Centraliza o ícone verticalmente *!*/
-/*  margin-top: 1em;*/
-/*}*/
-
-/*.contact-container a {*/
-/*  display: inline-block;*/
-/*  text-decoration: none;*/
-/*}*/
-
-.social-icon {
-  width: 3em; /* Tamanho do ícone */
-  height: 3em; /* Tamanho do ícone */
-  transition: transform 0.3s ease; /* Animação suave ao passar o mouse */
-}
-
-
-.social-icon:hover {
-  transform: scale(1.2); /* Aumenta ligeiramente o ícone ao passar o mouse */
-}
-
-@media (max-width: 768px) {
-  .social-icon {
-    width: 2em; /* Ajuste o tamanho do ícone para dispositivos móveis */
-    height: 2em; /* Ajuste o tamanho do ícone para dispositivos móveis */
-
-  }
-}
-
-.bitbucket-icon{
-  padding-top: 0.8em;
-  padding-left: 0.2em;
-  width: 3em; /* Tamanho do ícone */
-  height: 3.5em; /* Tamanho do ícone */
-  transition: transform 0.3s ease; /* Animação suave ao passar o mouse */
-}
-.bitbucket-icon:hover {
-  transform: scale(1.2); /* Aumenta ligeiramente o ícone ao passar o mouse */
-}
-
-.github-icon{
-  padding-top: 0.8em;
-  padding-left: 0.2em;
-  width: 3.3em; /* Tamanho do ícone */
-  height: 3em; /* Tamanho do ícone */
-  transition: transform 0.3s ease; /* Animação suave ao passar o mouse */
-}
-
-.github-icon:hover {
-  transform: scale(1.2); /* Aumenta ligeiramente o ícone ao passar o mouse */
-}
-
-.mechanical-skills-list {
-  list-style-type: none;
+  gap: 0.5rem;
   padding: 0;
-  margin: 0;
+  margin: 0.5rem 0 0;
+}
+.mechanical-skills-list li,
+.skills-list li {
+  background: var(--copper-soft);
+  color: #7a4413;
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 0.35em 0.8em;
+  border-radius: 999px;
+}
+#projects .skills-list li {
+  background: var(--teal-soft);
+  color: #0b4d46;
+}
+
+@media (max-width: 640px) {
+  .experience-item {
+    grid-template-columns: 1fr;
+  }
+  .experience-image {
+    justify-content: flex-start;
+  }
+}
+
+/* =====================
+   Software projects
+   ===================== */
+
+.project-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.project-item {
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  box-shadow: var(--shadow);
+  scroll-margin-top: 96px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 1em; /* Espaçamento entre os itens */
-  justify-content: center; /* Centraliza os itens */
+  flex-direction: column;
+  gap: 1rem;
+}
+.project-item h3 {
+  font-size: 1.15rem;
+}
+.project-item p {
+  color: var(--ink-soft);
+  text-align: justify;
+  hyphens: auto;
+}
+.doc-link {
+  display: inline-block;
+  margin: 0.25rem 0;
+}
+.icones-repo {
+  margin: 0.25rem 0 0.5rem;
+}
+.github-icon, .bitbucket-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+.video-caption {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  font-weight: 600;
+  margin: 0;
+}
+.project-video {
+  display: grid;
+  gap: 0.75rem;
 }
 
-.mechanical-skills-list li {
-  background-color: #e0e0e0;
-  padding: 0.5em 1em;
-  border-radius: 8px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  flex: 1 1 calc(20% - 1em); /* Define a largura de cada skill com até 4 por linha */
+@media (max-width: 820px) {
+  .project-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Footer */
+
+footer {
   text-align: center;
-  box-sizing: border-box; /* Inclui padding e border na largura */
-  margin-bottom: 0.5em;
-}
-
-@media (max-width: 768px) {
-  .mechanical-skills-list {
-    flex-direction: column; /* Organiza as habilidades em coluna */
-    align-items: center; /* Centraliza as habilidades na coluna */
-  }
-
-  .mechanical-skills-list li {
-    flex: 1 1 100%; /* Cada habilidade ocupa 100% da largura disponível */
-    max-width: 100%; /* Garante que as habilidades não ultrapassem a largura da tela */
-  }
+  padding: 3rem 1.5rem;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--line);
 }
