@@ -63,6 +63,13 @@ h1, h2, h3, h4 {
   margin: 0 0 0.5em;
 }
 
+/* Fraunces' bold (700) is a high-contrast display cut that looks broken at
+   small heading sizes; h3/h4 use semibold (600) instead, which keeps less
+   stroke contrast and stays legible at card-title scale. */
+h3, h4 {
+  font-weight: 600;
+}
+
 a {
   color: var(--teal);
   text-decoration: none;
