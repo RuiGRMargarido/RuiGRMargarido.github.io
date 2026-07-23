@@ -44,3 +44,7 @@ This repo is actively developed across multiple long-lived branches, each in its
 Each active line of work has an open GitHub PR kept as a long-lived tracking PR (not merged until the owner explicitly decides to publish) — commits keep landing on the same branch/PR rather than opening a new PR each time. Reference the relevant issue number in commit messages (e.g. `(#5)`) so GitHub cross-links the commit to its card; use `Closes #N` in the PR body (not in individual commits) so the issue auto-closes on merge.
 
 Work is tracked on a GitHub Project board ("Portfolio Redesign", https://github.com/users/RuiGRMargarido/projects/5) with a `Track` field (Design / Content) and a `Status` field (Backlog / Todo / In Progress / Done). Prefer real Issues over draft cards so commits/PRs can link to them.
+
+### GitHub Actions
+
+`.github/workflows/auto-assign.yml` is the only workflow in this repo — it fires on `issues.opened` and `pull_request.opened` and assigns the new issue/PR to `RuiGRMargarido` via `actions/github-script`. There is no CI/build/deploy workflow: GitHub Pages publishes `main` directly (see Commands above), so nothing here runs tests or builds anything.
