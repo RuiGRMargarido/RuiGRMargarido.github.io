@@ -102,30 +102,6 @@
 
     <li class="timeline-now"><span class="timeline-now-label">Now</span></li>
 
-    <li class="timeline-item soft right">
-      <div class="timeline-node" data-icon="project">
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 16 3 12l5-4M16 8l5 4-5 4M14 5l-4 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </div>
-      <a class="timeline-card" href="#proj-xaichatbot">
-        <span class="timeline-eyebrow">Project</span>
-        <span class="timeline-date">PESTI · 2025/26</span>
-        <h3>XAI Energy Chatbot</h3>
-        <p>Final-year internship project at GECAD: an LLM-based conversational system for explainable AI energy forecasting.</p>
-      </a>
-    </li>
-
-    <li class="timeline-item soft left">
-      <div class="timeline-node" data-icon="project">
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 16 3 12l5-4M16 8l5 4-5 4M14 5l-4 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </div>
-      <a class="timeline-card" href="#proj-anadi-ptd">
-        <span class="timeline-eyebrow">Project</span>
-        <span class="timeline-date">Sem 6 · 2025/26</span>
-        <h3>Distribution Transformer Load Prediction</h3>
-        <p>Machine learning project (ANADI) predicting distribution transformer station utilization for E-Redes' grid.</p>
-      </a>
-    </li>
-
     <li class="timeline-item soft right degree">
       <div class="timeline-node" data-icon="education">
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3 1 8l11 5 9-4.09V17h2V8L12 3Z" fill="currentColor"/><path d="M5 10.18v4.32c0 1.8 3.13 3.5 7 3.5s7-1.7 7-3.5v-4.32l-7 3.18-7-3.18Z" fill="currentColor"/></svg>
@@ -136,6 +112,30 @@
         <h3>Instituto Superior de Engenharia do Porto (ISEP)</h3>
         <p>Bachelor's degree in Software Engineering</p>
       </div>
+    </li>
+
+    <li class="timeline-item soft left">
+      <div class="timeline-node" data-icon="project">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 16 3 12l5-4M16 8l5 4-5 4M14 5l-4 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <a class="timeline-card" href="#proj-xaichatbot">
+        <span class="timeline-eyebrow">Project</span>
+        <span class="timeline-date">LEI-PROJ · 2025/26</span>
+        <h3>XAI Energy Chatbot</h3>
+        <p>Final-year internship project at GECAD: an LLM-based conversational system for explainable AI energy forecasting.</p>
+      </a>
+    </li>
+
+    <li class="timeline-item soft right">
+      <div class="timeline-node" data-icon="project">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 16 3 12l5-4M16 8l5 4-5 4M14 5l-4 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <a class="timeline-card" href="#proj-anadi-ptd">
+        <span class="timeline-eyebrow">Project</span>
+        <span class="timeline-date">Sem 6 · 2025/26</span>
+        <h3>Distribution Transformer Load Prediction</h3>
+        <p>Machine learning project (ANADI) predicting distribution transformer station utilization for E-Redes' grid.</p>
+      </a>
     </li>
 
     <li class="timeline-item mech left">
@@ -388,9 +388,9 @@
     <div class="project-row">
       <article class="project-item" id="proj-xaichatbot">
         <div class="project-details">
-          <h3>Final-Year Project (PESTI): XAI Energy Chatbot</h3>
+          <h3>Final-Year Project (LEI-PROJ): XAI Energy Chatbot</h3>
           <p>Final-year internship project developed at GECAD (ISEP's Research Group on Intelligent Engineering and Computing for Advanced Innovation and Development), tackling the interpretability gap in machine learning-based energy forecasting: the predictions, metrics and explanations these models produce are often too technical for users without specialized knowledge. The project delivers the XAI Energy Chatbot, an LLM-based conversational system that lets users query, in natural language, GECAD's energy consumption/generation forecasting models and their explainability artifacts (SHAP, LIME, PDP, ALE, Anchors, Counterfactuals), with responses adapted to the user's technical profile. Built on Clean Architecture, the backend is the sole orchestrator of a planner → validator → executor → responder tool pipeline, coordinating a locally-hosted LLM (LM Studio), a Retrieval-Augmented Generation layer over validated documentation (Qdrant), and the external ForeXAI explainability/forecasting API, backed by PostgreSQL persistence and LDAP/local composite authentication. The solution also ships an administrative area for user management, RAG corpus curation and ForeXAI diagnostics, and was validated with unit, integration and end-to-end (Playwright) test suites plus a CI pipeline.</p>
-          <a class="doc-link" href="assets/PESTI_RuiMargarido_XAIChatbot_Report.pdf" target="_blank">📄 Final Project Report — PESTI 2025/2026</a>
+          <a class="doc-link" href="assets/PESTI_RuiMargarido_XAIChatbot_Report.pdf" target="_blank">📄 Final Project Report — LEI-PROJ 2025/2026</a>
           <div class="project-skills">
             <h4>Skills Used</h4>
             <ul class="skills-list">
