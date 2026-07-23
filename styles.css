@@ -232,10 +232,9 @@ a:hover, a:focus-visible {
   padding: 1.25rem 2rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
-  max-width: 1200px;
-  margin-inline: auto;
 }
 #navbar a {
   color: var(--ink-soft);
@@ -252,7 +251,6 @@ a:hover, a:focus-visible {
   font-weight: 600;
   color: var(--ink);
   font-size: 1.5rem;
-  margin-right: auto;
 }
 .nav-title-mobile, .nav-title2-mobile {
   display: none;
