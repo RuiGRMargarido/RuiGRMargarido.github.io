@@ -415,6 +415,49 @@ section h2 {
 .timeline-item.left .timeline-card { text-align: right; }
 .timeline-item.right .timeline-card { text-align: left; }
 
+/* Degree milestones (Aveiro, ISEP) — "Marco" + "Selo" treatment */
+.timeline-eyebrow {
+  display: none;
+}
+.timeline-item.degree .timeline-eyebrow {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--copper);
+  margin-bottom: 0.35em;
+}
+.timeline-item.soft.degree .timeline-eyebrow {
+  color: var(--teal);
+}
+
+.timeline-item.degree .timeline-card {
+  position: relative;
+  background: var(--copper-soft);
+  border: 2px solid var(--copper);
+  max-width: 440px;
+}
+.timeline-item.soft.degree .timeline-card {
+  background: var(--teal-soft);
+  border-color: var(--teal);
+}
+.timeline-item.degree .timeline-card::before {
+  content: "";
+  position: absolute;
+  top: 0.9rem;
+  bottom: 0.9rem;
+  width: 4px;
+  border-radius: 2px;
+  background: var(--copper);
+}
+.timeline-item.soft.degree .timeline-card::before {
+  background: var(--teal);
+}
+.timeline-item.degree.left .timeline-card::before { left: -8px; }
+.timeline-item.degree.right .timeline-card::before { right: -8px; }
+
 .timeline-date {
   display: inline-flex;
   align-items: center;
