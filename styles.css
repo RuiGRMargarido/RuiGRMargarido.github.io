@@ -286,9 +286,6 @@ section h2 {
 
 /* About */
 
-.about-container {
-  max-width: 72ch;
-}
 .about-text p {
   color: var(--ink-soft);
   white-space: pre-line;
@@ -312,7 +309,6 @@ section h2 {
 
 .journey-intro {
   color: var(--ink-soft);
-  max-width: 65ch;
   font-size: 1.05rem;
   text-align: justify;
   hyphens: auto;
@@ -619,7 +615,6 @@ a.timeline-card:focus-visible {
    ===================== */
 
 .section-content {
-  max-width: 72ch;
   color: var(--ink-soft);
   margin-bottom: 2rem;
 }
