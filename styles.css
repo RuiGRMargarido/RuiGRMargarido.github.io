@@ -343,6 +343,40 @@ section h2 {
   transform: translateX(-50%);
 }
 
+/* "Now" marker — divides what's already happened from what's still ongoing */
+.timeline-now {
+  position: relative;
+  height: 1px;
+  margin: 0 0 2.75rem;
+  list-style: none;
+}
+.timeline-now::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 220px;
+  transform: translateX(-50%);
+  border-top: 2px dashed var(--teal);
+}
+.timeline-now-label {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%);
+  background: var(--paper);
+  padding: 0.2em 0.85em;
+  border: 1px solid var(--teal);
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--teal);
+  white-space: nowrap;
+}
+
 .timeline-item {
   position: relative;
   width: 50%;
@@ -538,6 +572,15 @@ a.timeline-card:focus-visible {
 @media (max-width: 720px) {
   .timeline::before {
     left: 22px;
+  }
+  .timeline-now::before {
+    left: 22px;
+    width: 140px;
+    transform: none;
+  }
+  .timeline-now-label {
+    left: 22px;
+    transform: translate(-50%, -50%);
   }
   .timeline-item,
   .timeline-item.left,
