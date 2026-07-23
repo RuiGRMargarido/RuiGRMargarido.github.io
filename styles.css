@@ -229,34 +229,46 @@ a:hover, a:focus-visible {
 #navbar ul {
   list-style: none;
   margin: 0;
-  padding: 0.75rem 1.5rem;
+  padding: 1.25rem 2rem;
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2rem;
   flex-wrap: wrap;
+  max-width: 1200px;
+  margin-inline: auto;
 }
 #navbar a {
   color: var(--ink-soft);
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
 }
 #navbar a:hover, #navbar a:focus-visible {
   color: var(--ink);
   text-decoration: none;
 }
-.nav-logo {
+#navbar a.nav-logo {
   font-family: var(--font-display);
   font-weight: 600;
-  color: var(--ink) !important;
-  font-size: 1.05rem;
+  color: var(--ink);
+  font-size: 1.5rem;
   margin-right: auto;
 }
 .nav-title-mobile, .nav-title2-mobile {
   display: none;
 }
+
+@media (max-width: 640px) {
+  .nav-title, .nav-title2 {
+    display: none;
+  }
+  .nav-title-mobile, .nav-title2-mobile {
+    display: inline;
+  }
+}
 .social-icon {
-  width: 22px;
-  height: 22px;
+  width: 28px;
+  height: 28px;
 }
 
 /* =====================
