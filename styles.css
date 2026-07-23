@@ -512,24 +512,6 @@ a.timeline-card:focus-visible {
   background: var(--teal-soft);
   color: var(--teal);
 }
-.ongoing-pill.inline {
-  background: linear-gradient(90deg, var(--copper-soft), var(--teal-soft));
-  color: var(--ink);
-}
-
-.concurrent-pill {
-  display: inline-block;
-  font-size: 0.68rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  padding: 0.15em 0.55em;
-  border-radius: 999px;
-  background: rgba(28, 36, 48, 0.06);
-  border: 1px solid var(--line);
-  color: var(--ink-soft);
-  vertical-align: middle;
-}
 
 .timeline-note {
   position: relative;
