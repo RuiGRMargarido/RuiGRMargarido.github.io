@@ -751,11 +751,70 @@ a.timeline-card:focus-visible {
    Software projects
    ===================== */
 
-.project-row {
+.projects-index {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.index-card {
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  text-decoration: none;
+  color: var(--ink);
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.index-card:hover, .index-card:focus-visible {
+  border-color: var(--teal);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+.index-card h3 {
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+.index-card .index-teaser {
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
+.index-card .index-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.15rem;
+}
+.index-card .index-tags span {
+  background: var(--teal-soft);
+  color: #0b4d46;
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 0.25em 0.65em;
+  border-radius: 999px;
+}
+.projects-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin: 0.5rem 0 2rem;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
+.projects-divider::before,
+.projects-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+.projects-deep-dive {
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
-  margin-bottom: 2rem;
 }
 .project-item {
   background: var(--paper-raised);
@@ -797,12 +856,6 @@ a.timeline-card:focus-visible {
 .project-video {
   display: grid;
   gap: 0.75rem;
-}
-
-@media (max-width: 820px) {
-  .project-row {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* Footer */
