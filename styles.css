@@ -796,6 +796,11 @@ a.timeline-card:focus-visible {
   padding: 0.25em 0.65em;
   border-radius: 999px;
 }
+.index-card .index-tags span.more {
+  background: none;
+  color: var(--ink-soft);
+  padding: 0.25em 0.2em;
+}
 .projects-divider {
   display: flex;
   align-items: center;
