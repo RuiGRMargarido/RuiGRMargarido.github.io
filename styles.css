@@ -14,11 +14,11 @@
   --navy-soft: #141d33;
   --star: #eef2ff;
 
-  --paper: #faf6ef;
+  --paper: #ffffff;
   --paper-raised: #ffffff;
   --ink: #1c2430;
   --ink-soft: #5b6472;
-  --line: #e4ddd0;
+  --line: #e2e4e8;
 
   --copper: #b5651d;
   --copper-soft: #f4e3d0;
@@ -222,7 +222,7 @@ a:hover, a:focus-visible {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(250, 246, 239, 0.92);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--line);
 }
