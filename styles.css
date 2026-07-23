@@ -287,13 +287,14 @@ section h2 {
 /* About */
 
 .about-container {
-  max-width: 62ch;
-  margin: 0 auto;
+  max-width: 72ch;
 }
 .about-text p {
   color: var(--ink-soft);
   white-space: pre-line;
   font-size: 1.08rem;
+  text-align: justify;
+  hyphens: auto;
 }
 .about-text p::first-letter {
   font-family: var(--font-display);
@@ -313,6 +314,8 @@ section h2 {
   color: var(--ink-soft);
   max-width: 65ch;
   font-size: 1.05rem;
+  text-align: justify;
+  hyphens: auto;
 }
 
 .legend {
@@ -620,6 +623,10 @@ a.timeline-card:focus-visible {
   color: var(--ink-soft);
   margin-bottom: 2rem;
 }
+.section-content > p {
+  text-align: justify;
+  hyphens: auto;
+}
 
 .experience-container {
   display: flex;
@@ -680,6 +687,8 @@ a.timeline-card:focus-visible {
 }
 .experience-details p {
   color: var(--ink-soft);
+  text-align: justify;
+  hyphens: auto;
 }
 
 .experience-videos {
@@ -769,6 +778,8 @@ a.timeline-card:focus-visible {
 }
 .project-item p {
   color: var(--ink-soft);
+  text-align: justify;
+  hyphens: auto;
 }
 .doc-link {
   display: inline-block;
