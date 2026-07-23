@@ -288,12 +288,15 @@ section h2 {
 
 .about-text p {
   color: var(--ink-soft);
-  white-space: pre-line;
   font-size: 1.08rem;
   text-align: justify;
   hyphens: auto;
+  margin: 0 0 1em;
 }
-.about-text p::first-letter {
+.about-text p:last-child {
+  margin-bottom: 0;
+}
+.about-text p:first-of-type::first-letter {
   font-family: var(--font-display);
   font-size: 3.4em;
   font-weight: 600;
