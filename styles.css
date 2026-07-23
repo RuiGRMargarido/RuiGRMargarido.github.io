@@ -118,8 +118,8 @@ a:hover, a:focus-visible {
 }
 
 .hero-photo {
-  width: 132px;
-  height: 132px;
+  width: 208px;
+  height: 208px;
   border-radius: 50%;
   overflow: hidden;
   border: 3px solid rgba(238, 242, 255, 0.35);
@@ -277,29 +277,11 @@ section h2 {
 /* About */
 
 .about-container {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 3rem;
-  align-items: start;
+  max-width: 68ch;
 }
 .about-text p {
   color: var(--ink-soft);
   white-space: pre-line;
-}
-.about-photo img {
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-
-@media (max-width: 720px) {
-  .about-container {
-    grid-template-columns: 1fr;
-  }
-  .about-photo {
-    order: -1;
-    max-width: 220px;
-    margin: 0 auto 1.5rem;
-  }
 }
 
 /* =====================
