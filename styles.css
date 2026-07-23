@@ -118,8 +118,8 @@ a:hover, a:focus-visible {
 }
 
 .hero-photo {
-  width: 208px;
-  height: 208px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   overflow: hidden;
   border: 3px solid rgba(238, 242, 255, 0.35);
@@ -134,7 +134,7 @@ a:hover, a:focus-visible {
 
 .hero h1 {
   color: var(--star);
-  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-size: clamp(2.8rem, 7vw, 4.6rem);
   font-weight: 600;
   letter-spacing: -0.01em;
   margin-bottom: 0.4em;
@@ -142,7 +142,7 @@ a:hover, a:focus-visible {
 
 .hero-tagline {
   color: rgba(238, 242, 255, 0.78);
-  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-size: clamp(1.15rem, 2.4vw, 1.45rem);
   margin: 0 0 2rem;
 }
 .hero-tagline .in-progress {
@@ -161,8 +161,8 @@ a:hover, a:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 42px;
-  height: 42px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   background: rgba(238, 242, 255, 0.92);
   border: 1px solid rgba(238, 242, 255, 0.18);
@@ -173,8 +173,8 @@ a:hover, a:focus-visible {
   transform: translateY(-2px);
 }
 .hero-socials img {
-  width: 22px;
-  height: 22px;
+  width: 27px;
+  height: 27px;
   object-fit: contain;
 }
 
