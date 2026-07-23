@@ -34,14 +34,11 @@ Every job, project, link (company site / GitHub / Bitbucket / PDF), embedded vid
 
 ## Git workflow for this project
 
-This repo is actively developed across multiple long-lived branches, each in its own **git worktree** (a separate folder, not just a branch switch) so design and content work can happen in parallel without one blocking the other:
+`main` is the live, published site — merging into it publishes immediately (no review/staging environment), so treat a merge to `main` as a deliberate publish action, not a routine integration step. The Constellation redesign and its content updates have already been merged (PRs #7 and #8); `main` is currently the only active branch, checked out directly in the primary folder (`RuiGRMargarido.github.io`).
 
-- `main` — the live, published site. Merging into `main` publishes immediately (no review/staging environment) — treat merges here as a deliberate publish action, not a routine integration step.
-- `redesign-constellation` — the current/chosen design direction. This folder (`RuiGRMargarido.github.io`, no suffix) is the primary one.
-- `content-updates` — content and copy changes (new projects, updated bios, corrections), based on top of `redesign-constellation`, in a sibling folder (`RuiGRMargarido.github.io - content-updates`).
-- A folder suffixed `- main` (`RuiGRMargarido.github.io - main`) exists purely to have `main` checked out somewhere for comparison/merge review, without disturbing the other two.
+For a future initiative that benefits from running in parallel without blocking other work (a new redesign direction, a large batch of content changes), reuse the pattern from that redesign: create a dedicated branch in its own **git worktree** — a separate sibling folder, e.g. `RuiGRMargarido.github.io - <branch-name>`, not just a branch switch in place — work there independently, and merge back into `main` once ready to publish.
 
-Each active line of work has an open GitHub PR kept as a long-lived tracking PR (not merged until the owner explicitly decides to publish) — commits keep landing on the same branch/PR rather than opening a new PR each time. Reference the relevant issue number in commit messages (e.g. `(#5)`) so GitHub cross-links the commit to its card; use `Closes #N` in the PR body (not in individual commits) so the issue auto-closes on merge.
+Each active line of work should have an open GitHub PR kept as a long-lived tracking PR (not merged until the owner explicitly decides to publish) — commits keep landing on the same branch/PR rather than opening a new PR each time. Reference the relevant issue number in commit messages (e.g. `(#5)`) so GitHub cross-links the commit to its card; use `Closes #N` in the PR body (not in individual commits) so the issue auto-closes on merge.
 
 Work is tracked on a GitHub Project board ("Portfolio Redesign", https://github.com/users/RuiGRMargarido/projects/5) with a `Track` field (Design / Content) and a `Status` field (Backlog / Todo / In Progress / Done). Prefer real Issues over draft cards so commits/PRs can link to them.
 
