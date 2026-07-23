@@ -411,15 +411,31 @@ section h2 {
   padding: 1.25rem 1.4rem;
   box-shadow: var(--shadow);
   max-width: 420px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
 .timeline-item.left .timeline-card { text-align: right; }
 .timeline-item.right .timeline-card { text-align: left; }
 
-/* Degree milestones (Aveiro, ISEP) — "Marco" + "Selo" treatment */
-.timeline-eyebrow {
-  display: none;
+/* Clickable cards (jobs and projects that link to their full entry) */
+a.timeline-card {
+  cursor: pointer;
 }
-.timeline-item.degree .timeline-eyebrow {
+a.timeline-card:hover,
+a.timeline-card:focus-visible {
+  border-color: var(--copper);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(28, 36, 48, 0.1);
+  text-decoration: none;
+}
+.timeline-item.soft a.timeline-card:hover,
+.timeline-item.soft a.timeline-card:focus-visible {
+  border-color: var(--teal);
+}
+
+/* Type eyebrow — Degree / Job / Certification / Project, shown on every card */
+.timeline-eyebrow {
   display: block;
   font-family: var(--font-body);
   font-size: 0.7rem;
@@ -429,7 +445,7 @@ section h2 {
   color: var(--copper);
   margin-bottom: 0.35em;
 }
-.timeline-item.soft.degree .timeline-eyebrow {
+.timeline-item.soft .timeline-eyebrow {
   color: var(--teal);
 }
 
@@ -501,6 +517,20 @@ section h2 {
   color: var(--ink);
 }
 
+.concurrent-pill {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 0.15em 0.55em;
+  border-radius: 999px;
+  background: rgba(28, 36, 48, 0.06);
+  border: 1px solid var(--line);
+  color: var(--ink-soft);
+  vertical-align: middle;
+}
+
 .timeline-note {
   position: relative;
   width: 100%;
@@ -566,6 +596,7 @@ section h2 {
   display: grid;
   grid-template-columns: 140px 1fr;
   gap: 2rem;
+  scroll-margin-top: 96px;
   background: var(--paper-raised);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -693,6 +724,7 @@ section h2 {
   border-radius: var(--radius);
   padding: 1.75rem;
   box-shadow: var(--shadow);
+  scroll-margin-top: 96px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
