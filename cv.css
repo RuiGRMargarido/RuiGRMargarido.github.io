@@ -1,0 +1,311 @@
+/* =========================================================
+   CV page — reuses the "Constellation" palette from the
+   portfolio (navy / copper / teal, Lora + Inter) in a
+   print-ready, two-column resume layout.
+   ========================================================= */
+
+:root {
+  --navy: #0b1220;
+  --navy-soft: #141d33;
+  --star: #eef2ff;
+
+  --paper: #ffffff;
+  --ink: #1c2430;
+  --ink-soft: #5b6472;
+  --line: #e2e4e8;
+
+  --copper: #b5651d;
+  --copper-soft: #f4e3d0;
+  --teal: #12796f;
+  --teal-soft: #d9f0ec;
+
+  --font-display: "Lora", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #eef1f6;
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--teal); }
+
+/* ---------- toolbar (screen only) ---------- */
+
+.cv-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 960px;
+  margin: 1.5rem auto 0;
+  padding: 0 1rem;
+  font-family: var(--font-body);
+}
+
+.cv-toolbar a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.cv-toolbar a:hover { color: var(--teal); }
+
+#print-btn {
+  background: var(--teal);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.1rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+#print-btn:hover { background: #0d5f57; }
+
+/* ---------- page ---------- */
+
+.cv-page {
+  max-width: 960px;
+  margin: 1.25rem auto 3rem;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  background: var(--paper);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(11, 18, 32, 0.12);
+}
+
+/* ---------- sidebar ---------- */
+
+.cv-sidebar {
+  background: radial-gradient(120% 120% at 30% 0%, var(--navy-soft) 0%, var(--navy) 60%);
+  color: var(--star);
+  padding: 2rem 1.5rem;
+}
+
+.cv-photo {
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--teal);
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+.cv-name {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0 0 0.25rem;
+  color: #fff;
+}
+
+.cv-role {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #b9c2d9;
+  margin: 0 0 1.75rem;
+  line-height: 1.4;
+}
+
+.cv-side-block {
+  margin-bottom: 1.6rem;
+}
+
+.cv-side-block h2 {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--teal-soft);
+  border-bottom: 1px solid rgba(238, 242, 255, 0.2);
+  padding-bottom: 0.35rem;
+  margin: 0 0 0.7rem;
+}
+
+.cv-side-block h3 {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #8fa0c6;
+  margin: 0.8rem 0 0.25rem;
+}
+
+.cv-contact, .cv-plain-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.82rem;
+}
+.cv-contact li, .cv-plain-list li {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  color: #dbe1f0;
+  word-break: break-word;
+}
+.cv-contact a, .cv-plain-list a {
+  color: #dbe1f0;
+  text-decoration: none;
+}
+.cv-contact a:hover { color: #fff; text-decoration: underline; }
+
+.cv-icon { color: var(--copper); flex: none; }
+
+.cv-tag {
+  margin-left: auto;
+  font-size: 0.68rem;
+  color: #8fa0c6;
+}
+
+.cv-skill-line {
+  font-size: 0.8rem;
+  color: #cdd6ec;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ---------- main column ---------- */
+
+.cv-main {
+  padding: 2rem 2.2rem;
+}
+
+.cv-main-header {
+  border-bottom: 2px solid var(--copper);
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.cv-headline {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--ink);
+  margin: 0;
+}
+
+.cv-block { margin-bottom: 1.8rem; }
+.cv-block:last-of-type { margin-bottom: 0; }
+
+.cv-block > h2 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--navy);
+  margin: 0 0 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.cv-block > h2::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+.cv-block p { margin: 0 0 0.7rem; font-size: 0.9rem; color: var(--ink); }
+.cv-block p:last-child { margin-bottom: 0; }
+
+.cv-entry { margin-bottom: 1.3rem; }
+.cv-entry:last-child { margin-bottom: 0; }
+.cv-entry-compact { margin-bottom: 0.6rem; }
+
+.cv-entry-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.cv-entry-head h3 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--ink);
+  margin: 0;
+}
+
+.cv-entry-sub {
+  font-weight: 500;
+  color: var(--teal);
+  font-size: 0.85rem;
+}
+
+.cv-entry-date {
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  white-space: nowrap;
+  flex: none;
+}
+
+.cv-entry p {
+  font-size: 0.87rem;
+  color: var(--ink-soft);
+  margin: 0 0 0.4rem;
+}
+
+.cv-stack {
+  font-size: 0.78rem;
+  color: var(--copper);
+  font-weight: 600;
+}
+
+.cv-bullets {
+  margin: 0.3rem 0 0;
+  padding-left: 1.1rem;
+  font-size: 0.87rem;
+  color: var(--ink-soft);
+}
+.cv-bullets li { margin-bottom: 0.25rem; }
+
+.cv-keywords {
+  font-size: 0.72rem;
+  color: var(--line);
+  margin-top: 1.5rem;
+}
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 760px) {
+  .cv-page { grid-template-columns: 1fr; }
+  .cv-sidebar { padding: 1.75rem 1.5rem; }
+}
+
+/* ---------- print ---------- */
+
+@media print {
+  @page { size: A4; margin: 12mm; }
+
+  .no-print { display: none !important; }
+
+  body { background: #fff; }
+
+  .cv-page {
+    box-shadow: none;
+    border-radius: 0;
+    margin: 0;
+    max-width: none;
+    grid-template-columns: 250px 1fr;
+  }
+
+  .cv-sidebar {
+    background: var(--navy) !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .cv-main { padding: 0 0 0 1.5rem; }
+
+  .cv-block { break-inside: avoid; }
+  .cv-entry { break-inside: avoid; }
+}
