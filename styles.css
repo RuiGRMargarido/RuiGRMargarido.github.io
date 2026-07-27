@@ -200,6 +200,29 @@ a:hover, a:focus-visible {
   background: rgba(238, 242, 255, 0.85);
   animation: scroll-cue-move 1.8s ease-in-out infinite;
 }
+
+/* Keep the scroll cue in the hero's content flow when vertical space is
+   limited, so it always remains below the social links. */
+@media (max-width: 640px), (max-height: 820px) {
+  .hero {
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+
+  .hero-inner {
+    padding-bottom: 0;
+  }
+
+  .scroll-cue {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    transform: none;
+    flex: 0 0 auto;
+    margin-top: 1rem;
+  }
+}
+
 @keyframes scroll-cue-move {
   0%   { top: 8px; opacity: 1; }
   70%  { top: 20px; opacity: 0.2; }
