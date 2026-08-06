@@ -114,6 +114,18 @@
 
     <li class="timeline-now"><span class="timeline-now-label">Now</span></li>
 
+    <li class="timeline-item soft left ongoing">
+      <div class="timeline-node" data-icon="project">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 16 3 12l5-4M16 8l5 4-5 4M14 5l-4 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <a class="timeline-card" href="#proj-homelab">
+        <span class="timeline-eyebrow">Project Started</span>
+        <span class="timeline-date">07/2026 <span class="ongoing-pill soft">Ongoing</span></span>
+        <h3>Homelab Infrastructure</h3>
+        <p>Self-hosted infrastructure on Proxmox, with a VLAN-segmented network behind a dedicated firewall.</p>
+      </a>
+    </li>
+
     <li class="timeline-item soft right degree">
       <div class="timeline-node" data-icon="education">
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3 1 8l11 5 9-4.09V17h2V8L12 3Z" fill="currentColor"/><path d="M5 10.18v4.32c0 1.8 3.13 3.5 7 3.5s7-1.7 7-3.5v-4.32l-7 3.18-7-3.18Z" fill="currentColor"/></svg>
@@ -422,6 +434,12 @@
   <div class="software-projects">
 
     <div class="projects-index">
+      <a class="index-card" href="#proj-homelab">
+        <span class="project-tag">Infrastructure</span>
+        <h3>Homelab Infrastructure</h3>
+        <p class="index-teaser">Self-hosted infrastructure on Proxmox: VLAN-segmented network behind a dedicated firewall, with restore-tested backups.</p>
+        <div class="index-tags"><span>Proxmox VE</span><span>Linux</span><span>Docker</span><span class="more">+17</span></div>
+      </a>
       <a class="index-card" href="#proj-xaichatbot">
         <h3>XAI Energy Chatbot</h3>
         <p class="index-teaser">Final-year internship at GECAD: an LLM-based conversational system for explainable AI energy forecasting.</p>
@@ -482,6 +500,97 @@
     <p class="projects-divider">full case studies below</p>
 
     <div class="projects-deep-dive">
+
+      <article class="project-item" id="proj-homelab">
+        <div class="project-details">
+          <span class="project-tag">Infrastructure</span>
+          <h3>Personal Project: Self-Hosted Homelab Infrastructure</h3>
+          <p>Ongoing personal infrastructure project built on a single refurbished mini PC, run as a small production environment rather than a lab toy. A Proxmox VE hypervisor hosts VMs and LXC containers across a network segmented into four zones with 802.1Q VLANs, trunked over a single physical link and mediated by a dedicated OPNsense firewall VM with a default-deny policy between zones. Storage runs on TrueNAS SCALE with ZFS, exported over NFS and SMB; services (Nextcloud, Jellyfin, Caddy) run in Docker Compose inside LXC containers, with WireGuard as the only entry point from the internet. Backups run nightly via rsync to an external SSD and were validated by an actual restore, checked at three levels: structural comparison of file listings, checksum verification, and playing back a restored video file. Base services are complete and validated; the VLAN segmentation is built and service migration is in progress. Every incident along the way has a written post-mortem covering symptom, diagnosis path, root cause and fix, including the wrong turns, because the wrong turn is usually the useful part.</p>
+          <div class="icones-repo">
+            <a href="https://github.com/RuiGRMargarido/homelab" target="_blank" rel="noopener">
+              <img src="GitHub-Logo-3821918866.png" alt="GitHub" class="github-icon">
+            </a>
+          </div>
+          <div class="project-status">
+            <div class="status-head">
+              <h4>Project status</h4>
+              <span class="status-pct">47%</span>
+            </div>
+            <div class="status-bar" role="img" aria-label="47 percent complete: 27 of 57 tasks">
+              <span style="width: 47%"></span>
+            </div>
+            <p class="status-meta">27 of 57 tasks complete, tracked in the repository checklist. Last updated August 2026.</p>
+            <ul class="status-phases">
+              <li>
+                <span class="phase-name">Phase 0 · Hardware</span>
+                <span class="phase-bar"><span style="width: 40%"></span></span>
+                <span class="phase-count">2/5</span>
+              </li>
+              <li class="is-done">
+                <span class="phase-name">Phase 1 · Base services</span>
+                <span class="phase-bar"><span style="width: 100%"></span></span>
+                <span class="phase-count">18/18</span>
+              </li>
+              <li>
+                <span class="phase-name">Phase 2 · VLANs and firewall</span>
+                <span class="phase-bar"><span style="width: 50%"></span></span>
+                <span class="phase-count">7/14</span>
+              </li>
+              <li>
+                <span class="phase-name">Phase 3 · Storage and RAID</span>
+                <span class="phase-bar"><span style="width: 0%"></span></span>
+                <span class="phase-count">0/2</span>
+              </li>
+              <li>
+                <span class="phase-name">Phase 4 · IaC and Kubernetes</span>
+                <span class="phase-bar"><span style="width: 0%"></span></span>
+                <span class="phase-count">0/7</span>
+              </li>
+              <li>
+                <span class="phase-name">Phase 5 · Monitoring and alerting</span>
+                <span class="phase-bar"><span style="width: 0%"></span></span>
+                <span class="phase-count">0/5</span>
+              </li>
+              <li>
+                <span class="phase-name">Phase 6 · Documentation tooling</span>
+                <span class="phase-bar"><span style="width: 0%"></span></span>
+                <span class="phase-count">0/6</span>
+              </li>
+            </ul>
+          </div>
+          <div class="project-skills">
+            <h4>Skills Used</h4>
+            <ul class="skills-list">
+              <li>Proxmox VE</li>
+              <li>Linux (Debian)</li>
+              <li>LXC</li>
+              <li>Docker / Docker Compose</li>
+              <li>OPNsense</li>
+              <li>802.1Q VLANs</li>
+              <li>Firewall Rules</li>
+              <li>WireGuard</li>
+              <li>TrueNAS SCALE</li>
+              <li>ZFS</li>
+              <li>NFS</li>
+              <li>SMB</li>
+              <li>Caddy</li>
+              <li>Nextcloud</li>
+              <li>Jellyfin</li>
+              <li>Bash</li>
+              <li>rsync</li>
+              <li>cron</li>
+              <li>Networking</li>
+              <li>Backup &amp; Restore</li>
+            </ul>
+          </div>
+        </div>
+        <figure class="project-figure">
+          <div class="project-diagram">
+            <img src="assets/homelab-network-topology.svg" alt="Network topology: the internet reaches a home router, which forwards a dedicated WAN leg into an OPNsense firewall VM. The firewall splits the homelab into three VLAN-segmented zones: a DMZ holding WireGuard, a Trusted zone holding TrueNAS, Caddy, Nextcloud and Jellyfin, and a Management zone holding Proxmox VE.">
+          </div>
+          <figcaption class="diagram-caption">Target architecture. The segmentation is built and working, but only WireGuard and the Proxmox management interface have been migrated so far; the remaining services are still on the flat network.</figcaption>
+        </figure>
+      </article>
 
       <article class="project-item" id="proj-xaichatbot">
         <div class="project-details">
