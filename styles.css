@@ -973,3 +973,154 @@ footer {
     hyphens: none;
   }
 }
+
+/* =====================
+   Homelab / infrastructure project
+   ===================== */
+
+.project-tag {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.25em 0.75em;
+  margin-bottom: 0.5rem;
+}
+
+.project-figure {
+  margin: 0;
+}
+.project-diagram {
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--navy);
+  line-height: 0;
+}
+.project-diagram img {
+  width: 100%;
+  height: auto;
+}
+.diagram-caption {
+  margin: 0.7rem 0 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+/* Progress mirrors the task checklist in the project repository. */
+.project-status {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1.1rem 1.25rem;
+}
+.status-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.6rem;
+}
+.status-head h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+.status-pct {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--teal);
+  font-variant-numeric: tabular-nums;
+}
+.status-bar {
+  height: 10px;
+  border-radius: 999px;
+  background: var(--teal-soft);
+  overflow: hidden;
+}
+.status-bar > span {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--teal);
+}
+.status-meta {
+  margin: 0.55rem 0 0;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+.status-phases {
+  list-style: none;
+  margin: 1.1rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+.status-phases li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 96px 46px;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+}
+.status-phases li.is-done .phase-name {
+  color: var(--ink);
+  font-weight: 500;
+}
+.phase-bar {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--line);
+  overflow: hidden;
+}
+.phase-bar > span {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--teal);
+}
+.phase-count {
+  text-align: right;
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Roadmap keywords, deliberately styled as not-yet-claimed so they never
+   read as demonstrated skills while the status bar shows those phases at 0%. */
+.skills-planned-label {
+  margin: 1.1rem 0 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-soft);
+}
+#projects .skills-list.is-planned li {
+  background: none;
+  border: 1px dashed var(--line);
+  color: var(--ink-soft);
+  font-weight: 400;
+}
+
+@media (max-width: 640px) {
+  .status-phases li {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.35rem 0.75rem;
+  }
+  .phase-name { grid-column: 1; grid-row: 1; }
+  .phase-count { grid-column: 2; grid-row: 1; }
+  .phase-bar   { grid-column: 1 / -1; grid-row: 2; }
+
+  /* Shrinking the diagram to phone width makes its labels unreadable;
+     let it keep a legible size and pan horizontally instead. */
+  .project-diagram {
+    overflow-x: auto;
+  }
+  .project-diagram img {
+    min-width: 700px;
+  }
+}

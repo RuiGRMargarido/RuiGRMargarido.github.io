@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 548" role="img"
+     aria-labelledby="hl-title hl-desc"
+     font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <title id="hl-title">Homelab network topology</title>
+  <desc id="hl-desc">The internet reaches a home router, which forwards a dedicated WAN leg into an OPNsense firewall virtual machine. The firewall splits the homelab into three VLAN-segmented zones: a DMZ on VLAN 10 holding WireGuard, a Trusted zone on VLAN 20 holding TrueNAS, Caddy, Nextcloud and Jellyfin, and a Management zone on VLAN 30 holding Proxmox VE. WireGuard reaches the Trusted and Management zones through an authenticated tunnel.</desc>
+
+  <rect width="900" height="548" fill="#0b1220"/>
+
+  <g stroke="#49546b" stroke-width="1.5" fill="none">
+    <path d="M450 58 V 86"/>
+    <path d="M450 130 V 184"/>
+    <path d="M130 292 V 336"/>
+    <path d="M450 292 V 336"/>
+    <path d="M770 292 V 336"/>
+  </g>
+
+  <!-- Internet -->
+  <rect x="380" y="22" width="140" height="36" rx="18" fill="#8a93a3" stroke="#5b6472" stroke-width="1.5"/>
+  <text x="450" y="45" text-anchor="middle" font-size="14" font-weight="600" fill="#12161c">Internet</text>
+
+  <!-- Home router -->
+  <rect x="330" y="86" width="240" height="44" rx="10" fill="#8a93a3" stroke="#5b6472" stroke-width="1.5"/>
+  <text x="450" y="104" text-anchor="middle" font-size="13.5" font-weight="600" fill="#12161c">Home router</text>
+  <text x="450" y="120" text-anchor="middle" font-size="11" fill="#2b3340">DDNS · port-forward</text>
+  <text x="462" y="161" font-size="11" fill="#9aa4b8">dedicated WAN leg</text>
+
+  <!-- Firewall -->
+  <rect x="30" y="184" width="840" height="108" rx="12" fill="#182238" stroke="#5470ad" stroke-width="1.5"/>
+  <text x="50" y="207" font-size="13.5" font-weight="600" fill="#eef2ff">OPNsense firewall VM</text>
+  <text x="212" y="207" font-size="11" fill="#9aa4b8">default-deny between zones</text>
+
+  <g fill="#5470ad" stroke="#3c568c" stroke-width="1.5">
+    <rect x="390" y="214" width="120" height="28" rx="8"/>
+    <rect x="70" y="256" width="120" height="28" rx="8"/>
+    <rect x="390" y="256" width="120" height="28" rx="8"/>
+    <rect x="710" y="256" width="120" height="28" rx="8"/>
+  </g>
+  <g text-anchor="middle" font-size="12" font-weight="600" fill="#f5f7fa">
+    <text x="450" y="233">WAN</text>
+    <text x="130" y="275">DMZ</text>
+    <text x="450" y="275">Trusted</text>
+    <text x="770" y="275">Mgmt</text>
+  </g>
+
+  <!-- Zone panels -->
+  <rect x="30" y="336" width="200" height="134" rx="12" fill="#141d33" stroke="#9c6b1f" stroke-width="1.5"/>
+  <rect x="260" y="336" width="380" height="134" rx="12" fill="#141d33" stroke="#2c7259" stroke-width="1.5"/>
+  <rect x="670" y="336" width="200" height="134" rx="12" fill="#141d33" stroke="#5e4a93" stroke-width="1.5"/>
+
+  <g text-anchor="middle" font-size="12.5" font-weight="700">
+    <text x="130" y="361" fill="#e0a84e">DMZ · VLAN 10</text>
+    <text x="450" y="361" fill="#5fb99b">Trusted · VLAN 20</text>
+    <text x="770" y="361" fill="#a08ede">Management · VLAN 30</text>
+  </g>
+  <g text-anchor="middle" font-size="11" fill="#9aa4b8">
+    <text x="130" y="378">10.10.10.0/24</text>
+    <text x="450" y="378">10.10.20.0/24</text>
+    <text x="770" y="378">10.10.30.0/24</text>
+  </g>
+
+  <!-- Zone contents -->
+  <rect x="46" y="392" width="168" height="32" rx="8" fill="#c98a2e" stroke="#9c6b1f" stroke-width="1.5"/>
+  <text x="130" y="413" text-anchor="middle" font-size="12.5" font-weight="600" fill="#2a1b04">WireGuard</text>
+  <text x="130" y="444" text-anchor="middle" font-size="10.5" fill="#9aa4b8">only service reachable</text>
+  <text x="130" y="458" text-anchor="middle" font-size="10.5" fill="#9aa4b8">from the internet</text>
+
+  <g fill="#3e9678" stroke="#2c7259" stroke-width="1.5">
+    <rect x="276" y="392" width="166" height="30" rx="8"/>
+    <rect x="458" y="392" width="166" height="30" rx="8"/>
+    <rect x="276" y="430" width="166" height="30" rx="8"/>
+    <rect x="458" y="430" width="166" height="30" rx="8"/>
+  </g>
+  <g text-anchor="middle" font-size="12.5" font-weight="600" fill="#f5f7fa">
+    <text x="359" y="412">TrueNAS · ZFS</text>
+    <text x="541" y="412">Caddy</text>
+    <text x="359" y="450">Nextcloud</text>
+    <text x="541" y="450">Jellyfin</text>
+  </g>
+
+  <rect x="686" y="392" width="168" height="32" rx="8" fill="#7b63b8" stroke="#5e4a93" stroke-width="1.5"/>
+  <text x="770" y="413" text-anchor="middle" font-size="12.5" font-weight="600" fill="#f5f7fa">Proxmox VE</text>
+  <text x="770" y="444" text-anchor="middle" font-size="10.5" fill="#9aa4b8">hypervisor · web UI</text>
+  <text x="770" y="458" text-anchor="middle" font-size="10.5" fill="#9aa4b8">and API</text>
+
+  <!-- Authenticated tunnel -->
+  <g stroke="#c98a2e" stroke-width="1.5" stroke-dasharray="5 5" fill="none">
+    <path d="M130 470 V 502 H 770 V 470"/>
+    <path d="M450 502 V 470"/>
+  </g>
+  <rect x="366" y="510" width="168" height="24" rx="12" fill="#0b1220"/>
+  <text x="450" y="526" text-anchor="middle" font-size="11" fill="#e0a84e">authenticated tunnel</text>
+</svg>
