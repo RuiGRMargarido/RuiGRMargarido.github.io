@@ -1089,6 +1089,23 @@ footer {
   font-variant-numeric: tabular-nums;
 }
 
+/* Roadmap keywords, deliberately styled as not-yet-claimed so they never
+   read as demonstrated skills while the status bar shows those phases at 0%. */
+.skills-planned-label {
+  margin: 1.1rem 0 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-soft);
+}
+#projects .skills-list.is-planned li {
+  background: none;
+  border: 1px dashed var(--line);
+  color: var(--ink-soft);
+  font-weight: 400;
+}
+
 @media (max-width: 640px) {
   .status-phases li {
     grid-template-columns: minmax(0, 1fr) auto;
