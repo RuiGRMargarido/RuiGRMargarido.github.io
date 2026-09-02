@@ -454,7 +454,7 @@
         <span class="project-tag">Infrastructure</span>
         <h3>Homelab Infrastructure</h3>
         <p class="index-teaser">Self-hosted infrastructure on Proxmox: VLAN-segmented network behind a dedicated firewall, with restore-tested backups and alerting.</p>
-        <div class="index-tags"><span>Proxmox VE</span><span>Linux</span><span>Docker</span><span class="more">+39</span></div>
+        <div class="index-tags"><span>Proxmox VE</span><span>Linux</span><span>Docker</span><span class="more">+37</span></div>
       </a>
       <a class="index-card" href="#proj-xaichatbot">
         <h3>XAI Energy Chatbot</h3>
@@ -521,7 +521,7 @@
         <div class="project-details">
           <span class="project-tag">Infrastructure</span>
           <h3>Personal Project: Self-Hosted Homelab Infrastructure</h3>
-          <p>Ongoing personal infrastructure project built on a single refurbished mini PC, run as a small production environment rather than a lab toy. A Proxmox VE hypervisor hosts VMs and LXC containers across a network segmented into four zones with 802.1Q VLANs, trunked over a single physical link and mediated by a dedicated OPNsense firewall VM with a default-deny policy between zones. Storage runs on TrueNAS SCALE with ZFS, exported over NFS and SMB; services run in Docker Compose inside LXC containers, with WireGuard as the only entry point from the internet. Alongside Nextcloud, Jellyfin and Caddy there is a media automation stack whose download traffic is isolated behind a VPN kill-switch, and Jellyfin transcodes through Intel QuickSync passed into an unprivileged container. Backups run nightly via rsync to an external SSD, with a separate verified database dump, and were validated by an actual restore checked at three levels: structural comparison of file listings, checksum verification, and playing back a restored video file.</p>
+          <p>Ongoing personal infrastructure project built on a single refurbished mini PC, run as a small production environment rather than a lab toy. A Proxmox VE hypervisor hosts VMs and LXC containers across a network segmented into four zones with 802.1Q VLANs, trunked over a single physical link and mediated by a dedicated OPNsense firewall VM with a default-deny policy between zones. Storage runs on TrueNAS SCALE with ZFS, exported over NFS and SMB; services (Nextcloud, Jellyfin, Caddy) run in Docker Compose inside LXC containers, with WireGuard as the only entry point from the internet, and Jellyfin transcodes through Intel QuickSync passed into an unprivileged container. Backups run nightly via rsync to an external SSD, with a separate verified database dump, and were validated by an actual restore checked at three levels: structural comparison of file listings, checksum verification, and playing back a restored video file.</p>
           <p>A week-long storage failure in August drove a round of work that is the most instructive part of the project: hypervisor and NFS tuning (virtio NICs, a dedicated I/O thread for the pool disk, longer NFS timeouts), and then monitoring built around the specific blind spot that caused it. A port check on NFS answered green for six days while the service was dead, so the checks read the mount for real, watch I/O pressure and load rather than just uptime, and use push-based dead man's switches for the scheduled jobs, alerting to Slack. Every incident has a written post-mortem covering symptom, diagnosis path, root cause and fix, including the wrong turns, because the wrong turn is usually the useful part.</p>
           <div class="icones-repo">
             <a href="https://github.com/RuiGRMargarido/homelab" target="_blank" rel="noopener">
@@ -626,8 +626,6 @@
               <li>Monitoring &amp; Alerting</li>
               <li>Observability</li>
               <li>Slack Webhooks</li>
-              <li>Sonarr / Radarr / Prowlarr</li>
-              <li>gluetun (VPN kill-switch)</li>
               <li>Intel QuickSync (hardware transcoding)</li>
               <li>PCI / device passthrough</li>
               <li>Performance Tuning</li>
