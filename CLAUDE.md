@@ -52,7 +52,9 @@ Design tokens live at the top of `styles.css` as CSS custom properties: `--paper
 
 Every job, project, link (company site / GitHub / Bitbucket / PDF), embedded video and skill tag in `index.html` is real content the owner asked to keep. None of it is placeholder. When editing, preserve all of it; this is a reorganization and update target, not something to trim for brevity.
 
-**Do not claim skills that have not been exercised.** The homelab card is the live example: its "Skills Used" list covers only what the project's own checklist marks as built, and the roadmap keywords (Kubernetes, Terraform, Ansible, Prometheus, Grafana) sit in a separate, visually muted "Planned for later phases" list. The project status bar on the same card shows those phases at 0%, so listing them as skills would contradict the page itself.
+**Do not claim skills that have not been exercised.** The homelab card is the live example: its "Skills Used" list covers only what the project's own `docs/CHECKLIST.md` marks as built, and the status bar on the same card has to stay consistent with it. Listing a technology whose phase shows 0% contradicts the page itself.
+
+That card used to carry a second, visually muted "Planned for later phases" list holding the roadmap keywords (Kubernetes, OpenTofu, Ansible, Prometheus, Grafana, GitHub Actions), precisely so they could appear without being claimed. It was removed in September 2026 when all six became real: Phase 4 went from 0/10 to 14/17 and the keywords graduated into the main list. Bring the pattern back, with its CSS, if another project ever needs to show a roadmap it has not built yet.
 
 ## Writing style
 
