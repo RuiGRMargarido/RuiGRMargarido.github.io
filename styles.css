@@ -275,20 +275,11 @@ a:hover, a:focus-visible {
   color: var(--ink);
   font-size: 1.5rem;
 }
-.nav-title-mobile, .nav-title2-mobile {
-  display: none;
-}
 .nav-break {
   display: none;
 }
 
 @media (max-width: 640px) {
-  .nav-title, .nav-title2 {
-    display: none;
-  }
-  .nav-title-mobile, .nav-title2-mobile {
-    display: inline;
-  }
   #navbar ul {
     padding: 1rem 1.5rem;
     gap: 0.3rem 1.1rem;
@@ -978,6 +969,9 @@ footer {
    Homelab / infrastructure project
    ===================== */
 
+/* Card category label. Marks a card that departs from what its section
+   implies: Infrastructure under Projects, Mechanical Engineering under
+   Experience. Named for where it first appeared, used in both. */
 .project-tag {
   display: inline-block;
   align-self: flex-start;
